@@ -1,0 +1,300 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+	<meta charset="UTF-8">
+    <title>Mobidoc</title>
+    <link rel="stylesheet" type="text/css" href="css/layout.css">
+    <script type="text/javascript" src="scripts/jquery-1.11.0.min.js"></script>
+	<script src="scripts/iscroll.js"></script>
+	<script>
+		$( document ).ready(function() {
+			var gr = $("#timeline-scroll");
+			var _iscroll = new IScroll(gr.get(0), { 
+				snapStepY: 23,
+				scrollX: true,
+				bottomPadding:28,
+				topPadding:28,
+				resize: true, 
+				scrollbars: true, 
+				mouseWheel: true, 
+				disableMouse: true,
+				interactiveScrollbars: true, 
+				keyBindings: false,
+				click: true,
+				probeType: 3
+			});			
+		});
+	</script>
+</head>
+<body>
+<div id="domain1">
+	<div id="registration">
+		<div id="reg-top-line">S'inscrire en ligne</div>
+		<div id="reg-date-time">
+			<div id="date-day2">18</div>
+			<div id="date-month-year2">
+				<div id="date-month">fevrier</div>
+				<div id="date-year">2014</div>
+			</div>
+			<div id="date-time">11:40</div>
+		</div>
+		<div id="reg-doctor">
+			<div id="reg-doctor-name">Docteur Philippe Guerin</div>
+			<div id="reg-doctor-port"><img src="./images/clooney.png"></div>
+		</div>
+		<div id="motif">
+			<div id="motif-label">Motif</div>
+			<div id="motif-combo">Maladie</div>
+		</div>
+		<div id="commentaire">Commentaire
+			<div id="comment">
+				<textarea id="comment-text">Docteur, j'ai besoin de votre aide!</textarea>
+			</div>
+			<div id="subscribe-btn">S'inscrire</div>
+			<div id="cancel-btn">Cancel</div>
+		</div>
+	</div>
+	<div id="nav" class="navbar" style="min-height:500px">
+		<div>
+			<div id="space1" class="l0"> </div>
+			<div id="title" class="l1">
+				<div id="logo1" class="l2"></div>
+				mobidoc
+			</div>
+			<div id="space1" class="l0"> </div>
+			<div id="user" class="l3">
+				<div class="crWrap">
+					<div id="userCircle">
+						<div id="userIcon" class="ui1">A</div>
+					</div>
+				</div>
+				<div id="userTri" class="uTri"></div>
+				Andre
+			</div>
+			<div id="space1" class="l0"> </div>
+			<div id="medecins" class="l4">
+				<div id="medIcon" class="l5"></div>
+				Vos medecins
+			</div>
+			<div id="medList1">
+				<div id="mi1" class="med-1">Docteur Guerin</div>
+				<div id="mi2" class="med-1">Docteur Le Brozec</div>
+			</div>
+		</div>
+		<div id="bottomMenu" class="bm1">
+			<div id="space1" class="l0"> </div>
+			<div id="parameters" class="l7">
+				<div id="medIcon" class="l6"></div>
+				Parametrage
+			</div>
+			<div id="p1" class="l8">Profile et notifications</div>
+			<div id="p2" class="l8">Vos proches</div>
+			<div id="p3" class="l8">Quitter</div>
+		</div>
+	</div>
+	<div id="screen1" class="scr1">
+		<div id="top-line">
+			<div id="top-line-text">S'inscrire en ligne
+				<div id="top-line-logo"></div>
+			</div>
+			<div id="top-line-dossier">Dossier patient
+				<div id="top-line-dossier-logo"></div>
+			</div>
+			<div id="top-line-prescriptions">Prescriptions
+				<div id="top-line-prescriptions-logo"></div>
+			</div>
+			<div id="top-line-doc">Docteur Philippe Guerin</div>
+		</div>
+		<div id="top-line-border"></div>
+		<div id="date-zone">
+			<div id="date-prev"></div>
+			<div id="date-next"></div>
+			<div id="date-day">18</div>
+			<div id="date-month-year">
+				<div id="date-month">fev</div>
+				<div id="date-year">2014</div>
+			</div>
+			<div id="date-picker"></div>
+			<div id="med-select">
+				<select id="med-select-combo">
+	  				<option value="Ophtalmologie">Ophtalmologie</option>
+	  				<option value="Ophtalmologie">Ophtalmologie</option>
+				</select>
+			</div>
+			<div id="mode-box">Mode:</div>
+			<div id="mode-jour" class="mode-common mode-active">Jour</div>
+			<div id="mode-medecin" class="mode-common mode-inactive">Medecin</div>
+		</div>
+	</div>
+	<div id="grid-zone">
+		<div id="timeline">
+			<div id="timeline-header">
+			<table id="timeline-table">
+				<thead class="ttr">
+					<th id="tth1" class="tt-day0"> </th>
+					<th class="tt-day tr0">Lun<br>17 fev</th>
+					<th class="tt-day tr1">Mar<br>18 fev</th>
+					<th class="tt-day tr0">Mer<br>19 fev</th>
+					<th class="tt-day tr0">Jeu<br>20 fev</th>
+					<th class="tt-day tr0">Ven<br>21 fev</th>
+					<th class="tt-space"></th>
+				</thead>
+			</table>
+			</div>
+			<div id="timeline-scroll">
+				<table id="timeline-table2">
+					<tbody>
+						<tr id="ttr-1" class="ttr ttr1">
+							<td id="ttd-1-0" class="tt0">9:00</td>
+							<td id="ttd-1-1" class="tt1"></td>
+							<td id="ttd-1-2" class="tt1"></td>
+							<td id="ttd-1-3" class="tt1"></td>
+							<td id="ttd-1-4" class="tt1"></td>
+							<td id="ttd-1-5" class="tt1"></td>
+							<td class="tt-space"></td>
+						</tr>
+						<tr id="ttr-2" class="ttr ttr1">
+							<td id="ttd-2-0" class="tt0">9:20</td>
+							<td id="ttd-2-1" class="tt1"></td>
+							<td id="ttd-2-2" class="tt1">Something</td>
+							<td id="ttd-2-3" class="tt1"></td>
+							<td id="ttd-2-4" class="tt1"></td>
+							<td id="ttd-2-5" class="tt1"></td>
+							<td class="tt-space"></td>
+						</tr>
+						<tr id="ttr-3" class="ttr ttr1">
+							<td id="ttd-3-0" class="tt0">9:40</td>
+							<td id="ttd-3-1" class="tt1"></td>
+							<td id="ttd-3-2" class="tt1"></td>
+							<td id="ttd-3-3" class="tt2">9:40</td>
+							<td id="ttd-3-4" class="tt1"><div style="max-width:initial;">this is very long text</div></td>
+							<td id="ttd-3-5" class="tt1">11:00 No way</td>
+						</tr>
+						<tr id="ttr-4" class="ttr ttr1">
+							<td id="ttd-4-0" class="tt0">10:00</td>
+							<td id="ttd-4-1" class="tt1"></td>
+							<td id="ttd-4-2" class="tt1"></td>
+							<td id="ttd-4-3" class="tt1"></td>
+							<td id="ttd-4-4" class="tt1"></td>
+							<td id="ttd-4-5" class="tt2">Whatever</td>
+						</tr>
+						<tr id="ttr-5" class="ttr ttr1">
+							<td id="ttd-5-0" class="tt0">10:00</td>
+							<td id="ttd-5-1" class="tt3" onclick="$('#registration').toggle();">Doctor Who</td>
+							<td id="ttd-5-2" class="tt1"></td>
+							<td id="ttd-5-3" class="tt1"></td>
+							<td id="ttd-5-4" class="tt1"></td>
+							<td id="ttd-5-5" class="tt1">Whatever</td>
+						</tr>
+						<tr id="ttr-6" class="ttr ttr1">
+							<td id="ttd-6-0" class="tt0">10:00</td>
+							<td id="ttd-6-1" class="tt1"></td>
+							<td id="ttd-6-2" class="tt1"></td>
+							<td id="ttd-6-3" class="tt3">Doctor No</td>
+							<td id="ttd-6-4" class="tt1"></td>
+							<td id="ttd-6-5" class="tt1"></td>
+						</tr>
+						<tr id="ttr-1" class="ttr ttr1">
+							<td id="ttd-1-0" class="tt0">9:00</td>
+							<td id="ttd-1-1" class="tt1"></td>
+							<td id="ttd-1-2" class="tt1"></td>
+							<td id="ttd-1-3" class="tt1"></td>
+							<td id="ttd-1-4" class="tt1"></td>
+							<td id="ttd-1-5" class="tt1"></td>
+						</tr>
+						<tr id="ttr-2" class="ttr ttr1">
+							<td id="ttd-2-0" class="tt0">9:20</td>
+							<td id="ttd-2-1" class="tt1"></td>
+							<td id="ttd-2-2" class="tt1">Something</td>
+							<td id="ttd-2-3" class="tt1"></td>
+							<td id="ttd-2-4" class="tt1"></td>
+							<td id="ttd-2-5" class="tt1"></td>
+						</tr>
+						<tr id="ttr-3" class="ttr ttr1">
+							<td id="ttd-3-0" class="tt0">9:40</td>
+							<td id="ttd-3-1" class="tt1"></td>
+							<td id="ttd-3-2" class="tt1"></td>
+							<td id="ttd-3-3" class="tt2">9:40</td>
+							<td id="ttd-3-4" class="tt1"></td>
+							<td id="ttd-3-5" class="tt1">11:00 No way</td>
+						</tr>
+						<tr id="ttr-4" class="ttr ttr1">
+							<td id="ttd-4-0" class="tt0">10:00</td>
+							<td id="ttd-4-1" class="tt1"></td>
+							<td id="ttd-4-2" class="tt1"></td>
+							<td id="ttd-4-3" class="tt1"></td>
+							<td id="ttd-4-4" class="tt1"></td>
+							<td id="ttd-4-5" class="tt2">Whatever</td>
+						</tr>
+						<tr id="ttr-5" class="ttr ttr1">
+							<td id="ttd-5-0" class="tt0">10:00</td>
+							<td id="ttd-5-1" class="tt3">Doctor Who</td>
+							<td id="ttd-5-2" class="tt1"></td>
+							<td id="ttd-5-3" class="tt1"></td>
+							<td id="ttd-5-4" class="tt1"></td>
+							<td id="ttd-5-5" class="tt1">Whatever</td>
+						</tr>
+						<tr id="ttr-6" class="ttr ttr1">
+							<td id="ttd-6-0" class="tt0">10:00</td>
+							<td id="ttd-6-1" class="tt1"></td>
+							<td id="ttd-6-2" class="tt1"></td>
+							<td id="ttd-6-3" class="tt3">Doctor No</td>
+							<td id="ttd-6-4" class="tt1"></td>
+							<td id="ttd-6-5" class="tt1"></td>
+						</tr>
+						<tr id="ttr-1" class="ttr ttr1">
+							<td id="ttd-1-0" class="tt0">9:00</td>
+							<td id="ttd-1-1" class="tt1"></td>
+							<td id="ttd-1-2" class="tt1"></td>
+							<td id="ttd-1-3" class="tt1"></td>
+							<td id="ttd-1-4" class="tt1"></td>
+							<td id="ttd-1-5" class="tt1"></td>
+						</tr>
+						<tr id="ttr-2" class="ttr ttr1">
+							<td id="ttd-2-0" class="tt0">9:20</td>
+							<td id="ttd-2-1" class="tt1"></td>
+							<td id="ttd-2-2" class="tt1">Something</td>
+							<td id="ttd-2-3" class="tt1"></td>
+							<td id="ttd-2-4" class="tt1"></td>
+							<td id="ttd-2-5" class="tt1"></td>
+						</tr>
+						<tr id="ttr-3" class="ttr ttr1">
+							<td id="ttd-3-0" class="tt0">9:40</td>
+							<td id="ttd-3-1" class="tt1"></td>
+							<td id="ttd-3-2" class="tt1"></td>
+							<td id="ttd-3-3" class="tt2">9:40</td>
+							<td id="ttd-3-4" class="tt1"></td>
+							<td id="ttd-3-5" class="tt1">11:00 No way</td>
+						</tr>
+						<tr id="ttr-4" class="ttr ttr1">
+							<td id="ttd-4-0" class="tt0">10:00</td>
+							<td id="ttd-4-1" class="tt1"></td>
+							<td id="ttd-4-2" class="tt1"></td>
+							<td id="ttd-4-3" class="tt1"></td>
+							<td id="ttd-4-4" class="tt1"></td>
+							<td id="ttd-4-5" class="tt2">Whatever</td>
+						</tr>
+						<tr id="ttr-5" class="ttr ttr1">
+							<td id="ttd-5-0" class="tt0">10:00</td>
+							<td id="ttd-5-1" class="tt3">Doctor Who</td>
+							<td id="ttd-5-2" class="tt1"></td>
+							<td id="ttd-5-3" class="tt1"></td>
+							<td id="ttd-5-4" class="tt1"></td>
+							<td id="ttd-5-5" class="tt1">Whatever</td>
+						</tr>
+						<tr id="ttr-6" class="ttr ttr1">
+							<td id="ttd-6-0" class="tt0">10:00</td>
+							<td id="ttd-6-1" class="tt1"></td>
+							<td id="ttd-6-2" class="tt1"></td>
+							<td id="ttd-6-3" class="tt3">Doctor No</td>
+							<td id="ttd-6-4" class="tt1"></td>
+							<td id="ttd-6-5" class="tt1"></td>
+						</tr>					
+					</tbody>
+				</table>
+			</div>					
+		</div>
+	</div>
+</div>
+</body>
+</html>
