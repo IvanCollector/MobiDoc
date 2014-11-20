@@ -1,0 +1,30 @@
+body {
+display: block;
+margin: 0px;
+cursor:default;
+user-select: none;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ui-user-select: none;
+}
+
+@font-face {
+	font-family: FiraSans;
+	src: url("../fonts2/FiraSans-Book.ttf") format("truetype");
+	src: url("../fonts2/FiraSans-Light.ttf") format("truetype");
+}
+
+.disable-hover {
+  pointer-events: none;
+}
+
+#domain2 {
+	position: absolute;
+	width: 100%;
+	height:100%;
+	font-family: "FiraSans";
+	background-image: url(../images/login.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
