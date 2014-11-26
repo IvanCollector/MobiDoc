@@ -267,9 +267,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#62C6D6', end
 #top-line {
 	position: relative;
 	text-align: center;
-  	line-height:57px;
+  	line-height:52px;
   	vertical-align: middle;	
-	height:57px;
+	height:52px;
 	min-width: 60em;
 }
 
@@ -346,11 +346,47 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#62C6D6', end
 	color:#364656;
 }
 
-#top-line-border {
+#top-line-border-save {
 	margin-left: 30px;
 	height: 2px;
 	background-color:#364656;
 	width: 10em;
+}
+
+#top-line-border {
+	height: 2px;
+}
+
+.tlb-active {
+	background-color:#364656 !important;
+}
+
+.tlb-hover {
+	background-color:#BFC1C2 !important;
+}
+
+#tlb1 {
+	margin-left: 30px;
+	float: left;
+	background-color:transparent;
+	height: 2px;
+	width: 10em;
+}
+
+#tlb2 {
+	margin-left: 53px;
+	float: left;
+	background-color:transparent;
+	height: 2px;
+	width: 8.2em;
+}
+
+#tlb3 {
+	margin-left: 50px;
+	float: left;
+	background-color:transparent;
+	height: 2px;
+	width: 7.4em;
 }
 
 #date-zone {
@@ -636,13 +672,53 @@ table {
 
 #med-select {
 	margin-left: 40px;
+	text-indent: 5px;
 	float: left;
- 	background-color: #FFF;
-    width: 130px;
-	border: none;
+    width: 160px;
+	border-radius: 3px;
     overflow: hidden; 
     height: 34px;
-    background: url(../images/arr_down.png) no-repeat right center;
+    font-size: 14px;
+    line-height: 36px;
+	color: #587C8F;
+	font-family: "FiraSans";
+}
+
+.med-select-b1 {
+	border: 1px solid #63C6D6;
+    background: url(../images/arr_down.png) no-repeat 135px; 
+} 
+
+.med-select-b2 {
+    background: url(../images/arr_up.png) no-repeat 135px;
+	border: 1px solid transparent;
+}
+
+#med-select:hover{
+	border: 1px solid #63C6D6;
+}
+
+#med-select-opt{
+	position: absolute;
+    width: 160px;
+	border: 1px solid #63C6D6;
+	border-radius: 3px;
+	background-color: #FFF;
+	margin-top: -2px;
+	margin-left: -1px;
+}
+
+.med-select-value{
+    font-size: 14px;
+	float: top;
+    width: 160px;
+	color: #587C8F;
+	font-family: "FiraSans";
+}
+
+.med-select-value:hover{
+	color: #FFF;
+ 	background-color: #62C6D6;
 }
 
 #med-select-combo {

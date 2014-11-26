@@ -105,7 +105,11 @@
 			</div>
 			<div id="top-line-doc">Docteur Philippe Guerin</div>
 		</div>
-		<div id="top-line-border"></div>
+		<div id="top-line-border">
+			<div id="tlb1" class="tlb-active"></div>
+			<div id="tlb2"></div>
+			<div id="tlb3"></div>
+		</div>
 		<div id="date-zone">
 			<div id="date-prev"></div>
 			<div id="date-next"></div>
@@ -115,11 +119,11 @@
 				<div id="date-year">2014</div>
 			</div>
 			<div id="date-picker"></div>
-			<div id="med-select">
-				<select id="med-select-combo">
-	  				<option value="Ophtalmologie">Ophtalmologie</option>
-	  				<option value="Ophtalmologie">Ophtalmologie</option>
-				</select>
+			<div id="med-select" class="med-select-b1" onclick="$('#med-select').toggleClass('med-select-b1'); $('#med-select').toggleClass('med-select-b2'); $('#med-select-opt').toggle();">Ophtalmologie 1
+				<div id="med-select-opt">
+	  				<div id="combo1" class="med-select-value">Ophtalmologie 1</div>
+	  				<div id="combo2" class="med-select-value">Ophtalmologie 2</div>
+				</div>
 			</div>
 			<div id="mode-box">Mode:</div>
 			<div id="mode-jour" class="mode-common mode-active">Jour</div>
