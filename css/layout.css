@@ -70,8 +70,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#416a80', end
 	line-height: 35px;
 	vertical-align: middle;
 	font-weight: bold;
-	font-size: larger;
-	font-stretch: expanded;
+	font-size: 18px;
 	z-index: 0;
 	color: #fff;
  }
@@ -96,8 +95,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#416a80', end
 	height:75px;
 	color: #FFF;
 	font-weight: bold;
-	font-size: larger;
-	font-stretch: expanded;
+	font-size: 18px;
 	z-index: 0;
 }
 
@@ -110,6 +108,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#416a80', end
 	width:100%;
 	height:40px;
 	color: #FFF;
+	font-size: 14px;
 	z-index: 0;
 }
 
@@ -170,6 +169,7 @@ position:relative;
 float:none;
 height:40px;
 width:100%;
+font-size: 14px;
 text-indent: 2em;
 text-align: left;
 vertical-align: middle;	
@@ -229,6 +229,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#62C6D6', end
   	line-height: 40px;
   	vertical-align: middle;	
 	height:40px;
+	font-size: 14px;
 	z-index: 0;
 }
 
@@ -242,6 +243,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#62C6D6', end
   	vertical-align: middle;	
 	height:40px;
 	color: #C7D2D8;
+	font-size: 14px;
 	z-index: 0;
 }
 .l8:hover {
@@ -267,73 +269,48 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#62C6D6', end
 #top-line {
 	position: relative;
 	text-align: center;
-  	line-height:52px;
+  	line-height:53px;
   	vertical-align: middle;	
-	height:52px;
+	height:53px;
 	min-width: 60em;
 }
 
-#top-line-text{
-	text-indent: 5em;
-	color:#364656;
+.top-line-item{
+	text-indent: 3em;
+	color:#63C6D6;
 	font-size: 0.9em;
 	width: auto;
 	text-align: left;
 	float: left;
+	margin-left: 2em;
+	border-bottom: 2px transparent solid;
 }
 
-#top-line-logo {
-	float: none;
-	position: absolute;
-	left:2em;
-	top:1em;
-	width:27px;
-	height:27px;
-	background-image: url(../images/person_1.png);
-	z-index: 1;
+.top-line-active{
+	color:#364656 !important;
+	border-bottom: 2px #364656 solid !important;
+}
+
+.top-line-item:hover{
+	border-bottom: 2px #63C6D6 solid;
+}
+
+#top-line-text.top-line-active{
+	background: url(../images/person_1.png) no-repeat 0px center;
+}
+
+#top-line-text{
+	background: url(../images/person_2.png) no-repeat 0px center;
 }
 
 #top-line-dossier{
-	position: relative;
-	text-indent: 6em;
-	color:#63C6D6;
-	font-size: 0.9em;
-	width: auto;
-	text-align: left;
-	float: left;
-}
-
-#top-line-dossier-logo {
-	float: none;
-	position: absolute;
-	left:4em;
-	top:1em;
-	width:22px;
-	height:26px;
-	background-image: url(../images/dossier.png);
-	z-index: 1;
+	background: url(../images/dossier.png) no-repeat 0px center;
 }
 
 #top-line-prescriptions{
-	position: relative;
-	text-indent: 6em;
-	color:#63C6D6;
-	font-size: 0.9em;
-	width: auto;
-	text-align: left;
-	float: left;
+	background: url(../images/prescriptions.png) no-repeat 0px center;
 }
 
-#top-line-prescriptions-logo {
-	float: none;
-	position: absolute;
-	left:4em;
-	top:1em;
-	width:25px;
-	height:26px;
-	background-image: url(../images/prescriptions.png);
-	z-index: 1;
-}
 
 #top-line-doc {
 	float: right;
@@ -346,47 +323,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#62C6D6', end
 	color:#364656;
 }
 
-#top-line-border-save {
+#top-line-border {
 	margin-left: 30px;
 	height: 2px;
 	background-color:#364656;
 	width: 10em;
-}
-
-#top-line-border {
-	height: 2px;
-}
-
-.tlb-active {
-	background-color:#364656 !important;
-}
-
-.tlb-hover {
-	background-color:#BFC1C2 !important;
-}
-
-#tlb1 {
-	margin-left: 30px;
-	float: left;
-	background-color:transparent;
-	height: 2px;
-	width: 10em;
-}
-
-#tlb2 {
-	margin-left: 53px;
-	float: left;
-	background-color:transparent;
-	height: 2px;
-	width: 8.2em;
-}
-
-#tlb3 {
-	margin-left: 50px;
-	float: left;
-	background-color:transparent;
-	height: 2px;
-	width: 7.4em;
 }
 
 #date-zone {
@@ -677,57 +618,49 @@ table {
     width: 160px;
 	border-radius: 3px;
     overflow: hidden; 
-    height: 34px;
+    height: 32px;
     font-size: 14px;
     line-height: 36px;
 	color: #587C8F;
 	font-family: "FiraSans";
+	border: 1px solid #63C6D6;
+    background: url(../images/arr_down.png) no-repeat 135px; 
 }
 
 .med-select-b1 {
 	border: 1px solid #63C6D6;
-    background: url(../images/arr_down.png) no-repeat 135px; 
+    background: url(../images/arr_up_black.png) no-repeat 135px !important; 
 } 
-
-.med-select-b2 {
-    background: url(../images/arr_up.png) no-repeat 135px;
-	border: 1px solid transparent;
-}
 
 #med-select:hover{
 	border: 1px solid #63C6D6;
+    background: url(../images/arr_down_black.png) no-repeat 135px; 
 }
 
 #med-select-opt{
 	position: absolute;
-    width: 160px;
+    width: 200px;
 	border: 1px solid #63C6D6;
 	border-radius: 3px;
 	background-color: #FFF;
-	margin-top: -2px;
+	margin-top: -4px;
 	margin-left: -1px;
+	max-height: 281px;
 }
 
 .med-select-value{
-    font-size: 14px;
+    font-size: 12px;
 	float: top;
-    width: 160px;
+    width: 200px;
 	color: #587C8F;
+	height: 29px;
+	line-height: 29px;
 	font-family: "FiraSans";
 }
 
 .med-select-value:hover{
 	color: #FFF;
  	background-color: #62C6D6;
-}
-
-#med-select-combo {
-	margin-top: 7px;
- 	background-color: transparent;
-	border: none;
-	color: #587C8F;
-	font-family: "FiraSans";
-    width: 144px;
 }
 
 .nowrapper {
@@ -746,9 +679,10 @@ table {
 #mode-box {
 	float: left;
 	color: #587C8F;
-	padding-top: 11px;
 	margin-left: 30px;
 	font-size: 10px;
+	line-height: 34px;
+	height: 34px;
 }
 
 #mode-jour {
@@ -764,14 +698,14 @@ table {
 
 .mode-common {
 	font-size: 10px;
-	margin-top: 5px;
+	margin-top: 4px;
 	color: #FFF;
 	float: left;
 	width: auto;
-	padding-top: 4px;
-	padding-bottom: 4px;
 	padding-left: 15px;
 	padding-right: 15px;
+	height: 24px;
+	line-height: 24px;
 }
 
 .mode-active {
@@ -956,6 +890,13 @@ table {
 	vertical-align: middle;
 	line-height: 35px;
 	text-align: center;
+	border-radius: 3px;
+	border-color: #transparent;
+	border-width: 1px;
+	border-style: solid;
+}
+
+.subscribe{
 	background: #b8cf61; /* Old browsers */
 	background: -moz-linear-gradient(top,  #b8cf61 0%, #a5c23a 97%, #94ae2f 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b8cf61), color-stop(97%,#a5c23a), color-stop(100%,#94ae2f)); /* Chrome,Safari4+ */
@@ -964,14 +905,21 @@ table {
 	background: -ms-linear-gradient(top,  #b8cf61 0%,#a5c23a 97%,#94ae2f 100%); /* IE10+ */
 	background: linear-gradient(to bottom,  #b8cf61 0%,#a5c23a 97%,#94ae2f 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b8cf61', endColorstr='#94ae2f',GradientType=0 ); /* IE6-9 */
-	border-radius: 3px;
-	border-color: #transparent;
-	border-width: 1px;
-	border-style: solid;
+
 }
 
-#subscribe-btn:hover{
-	border-color: #94ae2f;
+.subscribe:hover{
+	background: #a7c43c; /* Old browsers */
+	background: -moz-linear-gradient(top,  #a7c43c 0%, #8ca820 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a7c43c), color-stop(100%,#8ca820)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #a7c43c 0%,#8ca820 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #a7c43c 0%,#8ca820 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #a7c43c 0%,#8ca820 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #a7c43c 0%,#8ca820 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a7c43c', endColorstr='#8ca820',GradientType=0 ); /* IE6-9 */
+}
+.subscribe.pressed{
+	background: #819D10 !important; 
 }
 
 #cancel-btn{
