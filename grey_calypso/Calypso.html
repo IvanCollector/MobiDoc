@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>Calypso</title>
+	<link rel="stylesheet" type="text/css" href="./Calypso_files/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="./Calypso_files/general.css">
+    <link rel="stylesheet" type="text/css" href="./Calypso_files/icons.css">
+    <link rel="stylesheet" type="text/css" href="./Calypso_files/layout.css">
+    <link rel="stylesheet" type="text/css" href="./Calypso_files/blocks.css">
+    <link rel="stylesheet" type="text/css" href="./Calypso_files/elements.css">
+    <link rel="stylesheet" type="text/css" href="./Calypso_files/effects.css">
+    <link rel="stylesheet" type="text/css" href="./Calypso_files/extends.css">
+    <link rel="stylesheet" type="text/css" href="./Calypso_files/generated-icons.css">
+    <link rel="stylesheet" type="text/css" href="./Calypso_files/normalize.css">
+    <link rel="stylesheet" type="text/css" href="./Calypso_files/jquery.jscrollpane.css">
+    <link rel="stylesheet" type="text/css" href="./Calypso_files/resizer.css">
+    <link href="http://calypso.postmodern.ru/favicon.ico" rel="shortcut icon" type="image/x-icon">
+
+    <body class="is-disableselect"><div id="sidebar">
+    <div class="content jspScrollable jspScrollable--transparent  is-disableselect">
+        <div class="content-inner" style="transition: 0ms cubic-bezier(0.1, 0.57, 0.1, 1); -webkit-transition: 0ms cubic-bezier(0.1, 0.57, 0.1, 1); transform: translate(0px, 0px) translateZ(0px);">
+
+        <div class="icon-with-text-b is-text-under-icon is-x3 is-hoverable">
+	<div class="icon is-x3 is-glow--onhover is-imac is-color-6ca9f0"></div>
+	<div class="text-be" title="1234">1234</div>
+</div></div>
+    <div class="iScrollVerticalScrollbar iScrollLoneScrollbar" style="position: absolute; z-index: 4; width: 0.25em; bottom: 52px; top: 28px; right: 3px;"><div class="iScrollIndicator" style="width: 100%; transition: 0ms cubic-bezier(0.1, 0.57, 0.1, 1); -webkit-transition: 0ms cubic-bezier(0.1, 0.57, 0.1, 1); display: none; height: 414px; transform: translate(0px, 0px) translateZ(0px);"></div></div></div>
+</div><div id="main" class="is-disableselect">
+    <div class="row-l is-system-panel cf js-system-panel is-disableselect">
+        <div class="blue-toolbar-fork-l">
+            <div class="left-side-ll">
+                <div class="blue-toolbar-overflow-l">
+                    <div class="blue-toolbar-l" id="system-toolbar">
+                    	<div class="toolbar-more-b is-with-padding">
+				        	<div class="ellipsis-be"></div>
+				        </div>
+                        <div class="blue-toolbar-section-l cf">
+                            <div class="icon is-coral is-glow--onhover is-white-bg-on-check-large"></div>
+                            <div class="icon is-process is-glow--onhover is-white-bg-on-check-large"></div>
+                            <div class="icon is-compass is-glow--onhover is-white-bg-on-check-large"></div>
+                            <div id="modeButton" class="icon is-glow--onhover is-white-bg-on-check-large is-eye" title="Переключение режима Design/Runtime" onclick="calypso1.design.getDesignManager().setMode(this); return false;" style="opacity: 1;"></div>
+                            <div class="icon is-save-menu is-glow--onhover is-white-bg-on-check-large" onclick="calypso1.common.viewLoader(this);"></div>
+                        </div>
+                    <div class="blue-toolbar-section-l one-control cf" style="padding-left: 0.6875em;"><div class="toolbar-item-e">Документы</div></div><div class="blue-toolbar-section-l one-control cf"><div class="toolbar-item-e">CRM</div></div><div class="blue-toolbar-section-l one-control cf"><div class="toolbar-item-e">ЭMK</div></div><div class="blue-toolbar-section-l one-control cf"><div class="toolbar-item-e">Редактирование ЭMK</div></div><div class="blue-toolbar-section-l one-control cf"><div class="toolbar-item-e">Ресурсы</div></div><div class="blue-toolbar-section-l one-control cf"><div class="toolbar-item-e">Опции</div></div><div class="blue-toolbar-section-l one-control cf"><div class="toolbar-item-e">Настройки</div></div><div class="blue-toolbar-section-l one-control cf"><div class="toolbar-item-e">Контуры</div></div><div class="blue-toolbar-section-l one-control cf"><div class="toolbar-item-e">Привязка</div></div></div>
+                </div>
+            </div>
+            <div class="right-side-ll">
+                <div class="name-n-led-b">
+                    <div class="text-btn-e is-arrow-drop" id="current-user-name">admin</div>
+                    <div id="connection-indicator" class="icon is-led" onclick="calypso1.loginForm.showLogin(true);"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row-l is-controls-panel is-disableselect">
+        <div class="blue-toolbar-fork-l is-desiner js-designer-toolbar">
+            <div class="left-side-ll">
+                <div class="blue-toolbar-overflow-l">
+                    <div class="blue-toolbar-l" id="designer-toolbar">
+                    	<div class="toolbar-more-b is-with-padding">
+				          <div class="ellipsis-be"></div>
+				        </div>
+                        <div class="blue-toolbar-section-l cf">
+                            <div class="text-btn-e is-check inline-block-gm" id="interfaceSelector" onclick="return calypso1.common.selectInterface(this);">Интерфейс</div>
+                            <div class="text-btn-e inline-block-gm" id="sourceCodeSelector" onclick="return calypso1.common.selectSourceCode();">Код</div>
+                        </div>
+                        <div class="blue-toolbar-section-l is-desiner cf">
+                            <div class="icon is-remove-border is-white-bg-on-check is-glow--onhover" title="Убрать рамки" onclick="calypso1.design.getDesignManager().removeBorders(this);"></div>
+                            <div class="icon is-one-up is-white-bg-on-check is-glow--onhover" title="Выбрать родителя" onclick="calypso1.design.getDesignManager().selectControlParent(); return false;"></div>
+                            <div class="icon is-mouse-default is-white-bg-on-check is-glow--onhover" title="Курсор" onclick="calypso1.design.getDesignManager().unselectControl(); return false;"></div>
+                            <div class="icon is-trash is-white-bg-on-check is-glow--onhover" onclick="calypso1.design.getDesignManager().deleteItem(event, this);return false;"></div>
+                        </div>
+                    <div class="blue-toolbar-section-l one-control is-desiner cf" style="padding-left: 0.6875em;"><div class="icon-dropdown-b"><div class="icon-bl"><div class="icon is-glow--onhover is-hor-split"></div></div><div style="cursor:pointer;" class="drop-arrow-be"></div></div></div><div class="blue-toolbar-section-l one-control is-desiner cf"><div class="icon is-white-bg-on-check is-glow--onhover is-table" title="Грид"></div></div><div class="blue-toolbar-section-l one-control is-desiner cf"><div class="icon is-white-bg-on-check is-glow--onhover is-tree" title="Дерево"></div></div><div class="blue-toolbar-section-l one-control is-desiner cf"><div class="icon is-white-bg-on-check is-glow--onhover is-soap" title="Кнопка"></div></div><div class="blue-toolbar-section-l one-control is-desiner cf"><div class="icon is-white-bg-on-check is-glow--onhover is-word" title="Надпись"></div></div><div class="blue-toolbar-section-l one-control is-desiner cf"><div class="icon is-white-bg-on-check is-glow--onhover is-A-in-rect" title="Поле редактирования"></div></div><div class="blue-toolbar-section-l one-control is-desiner cf"><div class="icon is-white-bg-on-check is-glow--onhover is-ticket" title="Тулбар"></div></div><div class="blue-toolbar-section-l one-control is-desiner cf"><div class="icon is-white-bg-on-check is-glow--onhover is-toolbar-section" title="Раздел тулбара"></div></div><div class="blue-toolbar-section-l one-control is-desiner cf"><div class="icon is-white-bg-on-check is-glow--onhover is-dropdown-in-rect" title="Комбобокс"></div></div><div class="blue-toolbar-section-l one-control is-desiner cf"><div class="icon is-white-bg-on-check is-glow--onhover is-calendar" title="Календарь"></div></div></div>
+                </div>
+            </div>
+            <div class="right-side-ll">
+                <div class="doc-name-menu-b">
+                    <div class="input-b">
+                        <div class="select-input-wb">
+                            <div class="select-input-labels-wd" data-label="новая" id="initMetaSelect">
+                                <select class="select-input-b" name="localisation"><option value="testNew">новая</option><option value="testEmpty">пустой</option><option value="testPanels">вложенные панели</option><option value="testToolbar2">тулбар</option><option value="testGrid">грид</option><option value="testTree">дерево</option></select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="icon is-server-sync is-glow--onhover"></div>
+                    <div class="icon is-save is-glow--onhover" id="save-form-right"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="main-content-l">
+
+        <div class="left-ll">
+            <div class="stack-b"></div>
+            <div class="content-lll js-main-content jspScrollable jspScrollable--transparent">
+                <div style="height:100%" id="form26" class="elements-here"><div id="ext_26" class="control" style="position: relative; overflow: hidden; height: 100%;"><div id="mid_26" class="control" style="position: relative; overflow: auto; height: 100%;"><div id="26" class="control section-l"><div id="ext_30" class="control autosize-l" style="position: relative; overflow: hidden; flex: 100 0 auto; height: auto; min-height: 0px;"><div id="mid_30" class="control reset-l" style="overflow: auto;"><div id="30" class="control section-l" style="overflow: auto; height: 100%;"></div></div></div></div></div></div></div>
+                <!--<div style="height:100%;display:none;" id="form33" class="elements-here" ></div>-->
+                <div style="height:100%;display:none;" id="sourceCodeEditor" class="elements-here"></div>
+            </div>
+        </div>
+
+        <div class="right-ll">
+
+            <div class="box_forms">
+
+                <div class="tree-top-panel-b is-disableselect">
+                    <div class="icon is-tree-open is-blue-stamp" onclick="calypso1.design.getPropEditor().togglePropTree(this);"></div>
+                    <div class="text-with-icon-b">
+                        <div class="icon"></div>
+                        <div class="text-be" id="prop_name_form"></div>
+                    </div>
+                </div>
+
+                <div id="option_splitter">
+                    <div class="splitter-panel is-disableselect ui-resizable" id="prop_tree_items_panel" style="overflow: hidden; height: 200px; display: block; width: 284px; background: white;">
+                        <div class="prop_tree_items" style="display: table; transition: 0ms cubic-bezier(0.1, 0.57, 0.1, 1); -webkit-transition: 0ms cubic-bezier(0.1, 0.57, 0.1, 1); transform: translate(0px, 0px) translateZ(0px);">
+                            <div class="items" style="min-width: 284px;"><div class="tree-b is-tree-b-small is-striped-bg tree-vertical-split-eff tree-alt-split-eff"><ul class="tree-branch-b is-nest1"><div class="tree-item-b cf is-header" id="tree_item_interface"><div class="name-be"><div class="tree-branch-name-b"><div class="arrow-l" style="display: none;"><div class="arrow-be"></div></div><div class="name-be"><div class="icon is-window-div is-blue is-check tree-branch-name--first-icon"></div><div class="content-bl text-ellipsis-gm">интерфейс</div></div></div></div></div></ul><ul class="tree-branch-b is-nest1"><div class="tree-item-b cf is-header" id="tree_item_model"><div class="name-be"><div class="tree-branch-name-b"><div class="arrow-l" style="display: none;"><div class="arrow-be"></div></div><div class="name-be"><div class="icon is-datamodel is-blue is-check tree-branch-name--first-icon"></div><div class="content-bl text-ellipsis-gm">модель данных</div></div></div></div></div></ul></div></div>
+                        </div>
+                    <div class="iScrollVerticalScrollbar iScrollLoneScrollbar" style="position: absolute; z-index: 4; width: 0.25em; bottom: 2px; top: 2px; right: 3px;"><div class="iScrollIndicator" style="width: 100%; transition: 0ms cubic-bezier(0.1, 0.57, 0.1, 1); -webkit-transition: 0ms cubic-bezier(0.1, 0.57, 0.1, 1); display: none; height: 192px; transform: translate(0px, 0px) translateZ(0px);"></div></div><div class="iScrollHorizontalScrollbar iScrollLoneScrollbar" style="position: absolute; z-index: 4; height: 0.25em; left: 2px; right: 2px; bottom: 2px;"><div class="iScrollIndicator" style="height: 100%; transition: 0ms cubic-bezier(0.1, 0.57, 0.1, 1); -webkit-transition: 0ms cubic-bezier(0.1, 0.57, 0.1, 1); display: none; width: 276px; transform: translate(0px, 0px) translateZ(0px);"></div></div></div>
+
+                    <div class="tree-bottom-panel-b" style=" clear: both;">
+                        <!--<div class="icon is-tree-open is-blue-stamp is-inactive" onclick="calypso1.design.getDesignManager().changeOrder('first');"></div>-->
+                        <div class="icon is-up-minus is-blue-stamp is-inactive" onclick="calypso1.design.getDesignManager().changeOrder(&#39;up&#39;);"></div>
+                        <div class="icon is-down-minus is-blue-stamp is-inactive" onclick="calypso1.design.getDesignManager().changeOrder(&#39;down&#39;);"></div>
+                        <!--<div class="icon is-tree-close is-blue-stamp is-inactive" onclick="calypso1.design.getDesignManager().changeOrder('last');"></div>-->
+                        <div class="ui-resizable-handle ui-resizable-s"></div>
+                        <div class="icon is-delete is-blue-stamp" onclick="calypso1.design.getDesignManager().deleteItem(event, this);return false;"></div>
+                        <div class="icon is-add is-blue-stamp" onclick="calypso1.design.getDesignManager().addItem(event, this); return false;">
+                            <div class="drop-arrow-be">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="splitter-panel" id="prop_editor_items_panel" style="background:white;"><div>
+                        <div id="options" class="is-disableselect" style="display:none;">
+							<div class="prop-editor-l is-footer">
+								<div id="prop-editor-body-wrap" class="prop-editor--body-ll" style="clear: both; position: relative; overflow: hidden; height: 90px; background: white;">
+									<div id="prop-editor-body" style="transition: 0ms cubic-bezier(0.1, 0.57, 0.1, 1); -webkit-transition: 0ms cubic-bezier(0.1, 0.57, 0.1, 1); transform: translate(0px, 0px) translateZ(0px);"></div>
+								<div class="iScrollVerticalScrollbar iScrollLoneScrollbar" style="position: absolute; z-index: 4; width: 0.25em; bottom: 2px; top: 2px; right: 3px;"><div class="iScrollIndicator" style="width: 100%; transition: 0ms cubic-bezier(0.1, 0.57, 0.1, 1); -webkit-transition: 0ms cubic-bezier(0.1, 0.57, 0.1, 1); display: none; height: 20px; transform: translate(0px, -20px) translateZ(0px);"></div></div></div>
+								<div class="prop-editor--footer-ll">
+									<div class="prop-editor-footer-b">
+										<div class="icon is-Designer_property__show-all-properties is-stamp is-hoverable is-blue3" onclick="calypso1.design.getPropEditor().viewProp(&#39;all&#39;);"></div>
+										<div class="icon is-Designer_property__common-property is-stamp is-hoverable" onclick="calypso1.design.getPropEditor().viewProp(&#39;common&#39;);"></div>
+										<div class="icon is-Designer_property__event-property is-stamp is-hoverable" onclick="calypso1.design.getPropEditor().viewProp(&#39;event&#39;);"></div>
+									</div>
+								</div>
+							</div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div><div id="footer" class="footer-panel-b steel-bg-eff">
+    <div class="section-be is-resize">
+        <div class="icon is-footer-resize js-fullscreen-toggle" style="z-index:3" onclick="calypso1.common.formMaximize();"></div>
+    </div>
+
+</div><div class="blinded-e"></div><div id="add-control-combo" style="position: absolute; display: none" class="popup-b is-dropdown is-clear-padding is-top is-right"><div class="content-l"><div class="dropdown-filter-b"><div class="input-bl"><input type="text" class="filter-input-e"><div class="icon is-tetris is-glow--onhover is-blue-stamp"></div></div><div class="menu-bl"><div class="combobox-b"></div></div></div></div><div class="arrow-be"></div>
+</div></body></html>
