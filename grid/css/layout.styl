@@ -1,0 +1,583 @@
+@import 'assets/shapes.styl'
+
+.center-child-l 
+    height: 100%;
+    width:100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    
+    > div
+        -webkit-box-flex: 0;
+        -moz-box-flex: 0;
+        -webkit-flex: 0 0 auto;
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+        
+
+@-moz-document url-prefix() {
+.center-child-l {
+    width: 100%;
+    -moz-box-sizing: border-box;
+    }
+
+}
+
+.section-l
+    rect 100%
+    overflow auto
+    // border 4px solid white
+    bbox()
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: start;
+    -moz-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    -webkit-box-align: start;
+    -moz-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+
+    > div
+        width:100%
+        overflow auto
+        bbox()
+
+    &.is-horizontal
+        -webkit-box-orient: horizontal;
+        -moz-box-orient: horizontal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+
+        > div
+            height 100%
+            width auto
+
+        > .autosize-l
+            height 100%
+            width auto
+
+
+.autocontent-l
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+
+.autosize-l
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+    position relative
+    width:100%
+
+.reset-l
+    bbox()
+    rect 100%
+    position absolute
+
+// .grid-section-l
+//     rect 100%
+//     table-layout: fixed
+//     border-collapse: collapse
+//     bbox()
+
+//     > tbody
+//         rect 100%
+
+//     tr 
+//         > div
+//             position relative
+//             height 100%
+//             overflow auto
+
+
+// /*==========  vertical grid layout  ==========*/
+// .vgrid-section-l
+//     float left
+//     rect 100%
+//     overflow auto
+//     position relative
+//     bbox()
+
+//     > .is-autosize
+//         height: 100%
+//         position relative
+
+//         > div
+//             height 100%
+
+//     > div:not(.is-autosize)
+//         position absolute
+//         width:  100%
+
+//     > .first-l
+//         top 0
+
+.pagination-l
+    overflow hidden
+    height 40*PX
+    position relative
+    z-index: 0
+
+    > .pagination-btn-e
+        float left
+        &:first-of-type
+            margin-right 2*PX
+
+/*==========  b4fdf1f220ca5d7b7b89ab7bf8a293ea  ==========*/
+.blue-toolbar-fork-l
+    // overflow hidden
+    height 36*PX
+    padding-right 148*PX
+    position relative
+    z-index: 2
+
+
+    &.is-desiner
+        padding-right 40*gs
+
+        > .right-side-ll
+            top 0
+            right 0
+            
+        // 4!
+        .pagination-l
+            display none
+
+
+        &.is-pagination
+            padding-right 47*gs + 2*PX
+            // 4!
+            .pagination-l
+                display block
+                box-shadow - 3*PX 3*PX (4*PX) rgba(0,0,0,.25)
+
+    
+    /*-----  pagination  ------*/
+    &.is-pagination
+        .pagination-l
+            // display block
+            opacity 1
+            transition: opacity .25s ease-out
+
+    .pagination-l
+        // display none
+        transition: opacity .25s ease-in
+        opacity 0
+    /*-----  pagination  ends ------*/
+
+
+    > .right-side-ll
+        position absolute
+        right 4*PX
+        top 6*PX
+
+        > .pagination-l
+            margin-right 6*PX
+            margin-top 2*PX
+
+        > .pagination-l, > .doc-name-menu-b
+            float left
+
+/*==========  398fcfbc937cc644aa1c6940e27b6ec6  ==========*/
+.blue-toolbar-l
+    overflow:hidden
+    white-space: nowrap
+    display inline-block
+    height 36*PX 
+
+.blue-toolbar-overflow-l
+    overflow:hidden
+    height 36*PX
+    
+.is-controls-panel
+    .blue-toolbar-l
+        min-width 629*PX
+
+/*==========  58f19d47e7c54afecf2632fde1e9974a  ==========*/
+.blue-toolbar-section-l
+    float left
+    position relative
+    padding 0 11*PX
+    overflow hidden
+
+    &:first-of-type
+        padding-left 0
+
+    &:last-of-type
+        padding-right 0
+        
+        &:after
+            display none
+
+    &:after
+        content ''
+        height 22*PX
+        width PX
+        background-color rgba(255,255,255,.2)
+        position absolute
+        right 0
+        top 7*PX
+
+    &.is-desiner
+        padding 0 9*PX
+        > .icon
+            margin-right 0
+
+
+
+    > .icon, > .icon-with-text-b, > .icon-dropdown-b
+        float left
+        margin-right 7*PX
+
+    > .icon-dropdown-b
+        margin-right 5*PX
+
+
+    > .icon-with-text-b
+        margin-top 4*PX
+        margin-left 15*PX
+
+        &:first-of-type
+            margin-left 11*PX
+
+    > .text-btn-e
+        margin-top 8*PX
+        margin-right 5*PX
+        float left
+
+
+
+
+
+
+/*==========  821b9ab316290af714288b588521c130  ==========*/
+.accordion-line-l
+    border-bottom PX solid #d1d1d1
+
+    &.is-closed
+        .content-ll
+            height 0
+            padding 0
+            overflow hidden
+            opacity 0
+
+        .arrow-be
+            transform rotate(0)
+
+    &:last-of-type
+        border-bottom 0 solid #d1d1d1
+
+    .content-ll
+        bbox()
+        padding 20*PX
+        transition: padding-top .25s ease-out;
+
+
+/*==========  efa0ac4bce39e9dc59d6f22fb9754adc  ==========*/
+.tabs-with-content-l
+    .tabs-ll
+        margin-bottom - PX
+        // margin-left 12*PX
+    .content-ll
+        background-color white
+        border PX solid #a7bdda
+        border-radius 3*PX
+
+/*==========  21102badc1d56df830cafd725405255a  ==========*/
+.input-with-label-l
+    &.is-left
+        .label-le
+            float left 
+            margin-top 7*PX
+
+        .input-lh
+            float left
+            margin-left 18*PX
+
+
+    .label-le
+        font-size 12*PX
+        font-weight bold
+        color #2f3337
+        margin-bottom 12*PX
+        margin-left - PX
+        display block
+
+
+.row-l
+    padding-top .45em
+    // overflow: hidden
+
+    &.is-system-panel
+        position absolute
+        padding-right 21*gs
+        padding-bottom 6*PX 
+        bbox()
+        top  - PX
+        width 100%
+        min-height: 3em
+        margin-left .125em
+
+        &:after
+            content ''
+            position absolute
+            bottom - PX
+            left - (2*PX)
+            height PX
+            width 100%
+            background-color rgba(255,255,255,.2)
+            
+    &.is-fixed
+        position fixed
+        top 0
+        left -2px
+        width 100%
+        background rgba(86,100,123,.9)
+        box-shadow  0 2px 3px rgba(0,0,0,.39), 0 1px 0 rgba(0,0,0,.54),
+                    inset 0 -1px 2px rgba(108,169,240,.24),
+                    inset 0 0 43px rgba(255,255,255,.09)
+        border-bottom 0
+        bbox()
+        padding-right 30px
+        padding-left 96px
+        // transition box-shadow .15s ease-in
+
+    &.is-controls-panel
+        width 100%
+        position absolute
+        padding-right 21*gs
+        bbox()
+        top 7*gs
+        // float left
+        // min-width 1105px
+
+        .column-l
+            margin-top: .375em
+            margin-bottom: .455em
+
+        .is-just-icons
+            margin-top: .395em
+
+        .is-doc-name
+            margin-right .275em
+            margin-bottom: 0
+
+
+.column-l
+    border-right 1px solid rgba(255,255,255, .2)
+
+    &:last-of-type
+        border-right 0px solid rgba(255,255,255, .2)
+
+    &.is-controls
+        > div
+            float left
+
+    &.is-float-child
+        margin-left .875em
+        float   left
+        display inline-block
+        min-height: 1.4em
+        padding-right .5725em
+
+        &:first-of-type
+            margin-left 0
+
+        .icon-with-text-b
+            margin-right: 1em
+
+        > div
+            float left
+            margin-top -.3em
+            margin-right .64em
+
+        .text-btn-e
+            margin-top 0
+
+    &.is-just-icons
+        margin-left 1.0625em
+        .icon
+            margin-right .25em
+
+    &.is-pcs
+        margin-left 1em
+
+    &.is-controls
+        padding-right 0
+
+    &.is-main
+        margin-top .775em
+
+    &.is-user-name
+        float right
+        width 10em
+        margin-top .782em
+        overflow hidden
+
+        .led-e
+            margin-top - 1.7em
+            float right
+            margin-right -.6em
+
+        .text-btn-e
+            margin-right 3.2em
+
+        > div
+            float: right
+
+    &.is-doc-name
+        float: right
+
+        .icon
+            margin-top -.25em
+            margin-left -.05em
+            margin-right 0
+
+        .input-b
+            margin-right .3em
+
+        > div
+            float: left
+
+
+sidebarSize = 5.895em
+#sidebar
+    width sidebarSize
+    height: 100%
+    top 1.4em
+    float: left
+    padding-top: 1em
+    padding-right .5em
+    position fixed
+    bbox()
+treeItemHeight = 1.875em
+#main
+    height 100%
+    padding-left sidebarSize
+    padding-right: 2em
+    padding-top 14*gs + PX
+    padding-bottom 4*gs + 3*PX
+    float left
+    width 100%
+    
+    overflow hidden
+    bbox()
+
+
+.main-content-l
+    width  100%
+    height 100%
+    float left
+    z-index:  10
+    position relative
+    bbox()
+    background-color #f0f0f0
+    box-shadow 0 0 7px rgba(0,0,0,.5)
+    border-top-left-radius 3px
+    border-top-right-radius 3px
+    // margin-top 85*PX
+    float left
+
+    .left-ll
+        width 75%
+        float left
+        bbox()
+        height 100%
+        background-color #f1f1FF
+        border-top-left-radius 5px
+        border-right 2*PX solid #9399a5
+        // border-bottom-left-radius 5*PX
+        // overflow hidden
+
+    .right-ll
+        width 25%
+        float left
+        height 75%
+        background-color #f1f1f1
+        border-top-right-radius 5px
+        // border-bottom-right-radius 5px
+        overflow hidden
+
+    .content-lll
+        overflow-y auto
+        overflow-x hidden
+        padding-bottom 2*gs + 2*PX
+        rect 100%
+        bbox()
+        width 100%
+
+    .stack-b
+        margin-right - PX
+
+
+
+#footer
+    z-index 2
+    width 100%
+    position fixed
+    bottom 0 
+
+
+
+
+
+
+
+
+
+

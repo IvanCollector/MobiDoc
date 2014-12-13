@@ -1,0 +1,226 @@
+@import 'assets/colors.styl' 
+@import 'assets/shapes.styl' 
+.bold-gm
+    font-weight bold
+
+.regular-gm
+    font-weight normal
+/*==========  FONT COLORS  ==========*/
+.c-grey1-gm
+    color c-grey1
+
+/*==========  BG COLORS  ==========*/
+.c-grey1-bg-gm
+    background-color c-grey1
+.c-grey2-bg-gm
+    background-color c-grey2
+.c-grey3-bg-gm
+    background-color c-grey3
+.c-grey4-bg-gm
+    background-color c-grey4
+.c-grey5-bg-gm
+    background-color c-grey5
+.c-grey6-bg-gm
+    background-color c-grey6
+
+.c-blue1-bg-gm
+    background-color c-blue1
+.c-blue2-bg-gm
+    background-color c-blue2
+.c-blue3-bg-gm
+    background-color c-blue3
+.c-blue4-bg-gm
+    background-color c-blue4
+.c-blue5-bg-gm
+    background-color c-blue5
+
+.c-purple-bg-gm
+    background-color c-purple
+.c-pink-bg-gm
+    background-color c-pink
+
+.c-red1-bg-gm
+    background-color c-red1
+.c-red2-bg-gm
+    background-color c-red2
+
+.c-orange1-bg-gm
+    background-color c-orange1
+.c-orange2-bg-gm
+    background-color c-orange2
+
+.c-yellow1-bg-gm
+    background-color c-yellow1
+
+.c-green1-bg-gm
+    background-color c-green1
+.c-green2-bg-gm
+    background-color c-green2
+
+.c-cyan-bg-gm
+    background-color c-cyan
+
+// old one
+.c-yellow-bg-gm
+    background-color c-yellow
+
+.c-blue-sky-bg-gm
+    background-color c-blue-sky
+
+.c-blue-grey-bg-gm
+    background-color c-blue-grey
+
+.c-black-bg-gm
+    background-color c-black
+
+.c-white-bg-gm
+    background-color c-white
+
+/*==========  FLOATS  ==========*/
+.float-left-gm, .f-l-gm
+    float left
+
+.float-right-gm, .f-r-gm
+    float right
+
+.c-all-8-gm
+    color #888888
+
+/*==========  FONT SIZES  ==========*/
+.f-s-11-gm
+    font-size 11*PX
+
+.f-s-12-gm
+    font-size 12*PX
+
+/*==========  IDENTATION  ==========*/
+.margin-left-m1-gm
+    margin-left 2em
+
+.margin-left-m2-gm
+    margin-left 2em
+
+.margin-right-m1-gm
+    margin-right 2em
+
+.margin-right-m2-gm
+    margin-right 2em
+
+/*==========  DISPLAY  ==========*/
+.display-inline-block, .inline-block-gm
+    display  inline-block
+
+.hidden-gm
+    display none
+
+.text-ellipsis-gm
+    white-space: nowrap
+    -webkit-text-overflow: ellipsis
+    -moz-text-overflow: ellipsis
+    -khtml-text-overflow: ellipsis
+    -icab-text-overflow: ellipsis
+    -o-text-overflow: ellipsis
+    text-overflow: ellipsis
+    overflow:hidden
+
+.nimb-check-gm
+    position relative
+
+    &:after
+        content ''
+        width 0.28em
+        height 0.28em
+        border-radius 50%
+        background-color: white
+        position: absolute
+        top -.6em
+        left 50%
+        margin-left - 0.16em
+        box-shadow 0 0 .15em .08em white, 0 0 1.5em .9em #6ca9f0
+
+
+
+/*==========  system  ==========*/
+*
+    margin      0 
+    padding     0
+    -webkit-box-sizing  border-box
+       -moz-box-sizing  border-box
+            box-sizing  border-box
+
+d
+    display block
+
+body, html
+    width: 100%
+    height: 100%
+
+body
+    margin: 0 
+    padding: 0
+    font-size: 16px
+    box-shadow: inset 0 1px rgba(0,0,0,.2)
+    font-family: 'Open Sans', sans-serif
+    color: white
+    overflow hidden
+
+::selection
+    background-color #48ada3
+    color white
+    text-shadow none
+
+.collapsed
+    width   0
+    height  0 
+
+.clearfix
+    overflow: auto
+
+.cf:after,
+.cf:before {
+    content: '';
+    display: table;
+}
+.cf:after {
+    clear: both;
+}
+.cf {
+    zoom: 1;
+}
+
+
+
+
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Regular-webfont.eot');
+    src: url('../fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/OpenSans-Regular-webfont.woff') format('woff'),
+         url('../fonts/OpenSans-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans Semibold';
+    src: url('../fonts/OpenSans-Semibold-webfont.eot');
+    src: url('../fonts/OpenSans-Semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/OpenSans-Semibold-webfont.woff') format('woff'),
+         url('../fonts/OpenSans-Semibold-webfont.ttf') format('truetype'),
+         url('../fonts/OpenSans-Semibold-webfont.svg#open_sanssemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans Bold';
+    src: url('../fonts/OpenSans-Bold-webfont.eot');
+    src: url('../fonts/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/OpenSans-Bold-webfont.woff') format('woff'),
+         url('../fonts/OpenSans-Bold-webfont.ttf') format('truetype'),
+         url('../fonts/OpenSans-Bold-webfont.svg#open_sanssemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

@@ -1,0 +1,44 @@
+PX = 1/16em
+gs = 6*PX
+
+bold()
+	font-family 'Open Sans Bold'
+semibold()
+	font-family 'Open Sans Semibold'
+
+norm(size)
+	(1/(size/16))
+
+rect(size)
+	width size
+	height size
+
+crisp()
+	image-rendering:-moz-crisp-edges;
+	image-rendering: -o-crisp-edges;
+	image-rendering:-webkit-optimize-contrast;
+	-ms-interpolation-mode:nearest-neighbor;
+
+hl(color)
+	outline 1px solid color
+
+bbox()
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+
+transition(a,b,c,d=null)
+	-webkit-transition: a b c d
+	-moz-transition: a b c d
+	-o-transition: a b c d
+	transition: a b c d
+
+transform(transformation)
+	-webkit-transform: transformation
+	   -moz-transform: transformation
+	    -ms-transform: transformation
+	     -o-transform: transformation
+	        transform: transformation
+
+
+II = !important

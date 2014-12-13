@@ -1,0 +1,19 @@
+.grid-b.ex-td {
+  table-layout: fixed;
+  width: 20px;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+.grid-tr-bh:focus:hover .ex-td,
+.grid-tr-bh.is-check:hover .ex-td {
+  box-shadow: inset 0 0.0625em 0 #fff, inset 0 -0.0625em 0 #fff;
+}
+.grid-tr-bh:focus:hover .ex-td:first-child,
+.grid-tr-bh.is-check:hover td:first-child {
+  box-shadow: inset 0.125em 0 0 #fff, inset 0 0.0625em 0 #fff, inset 0 -0.0625em 0 #fff;
+}
+.grid-tr-bh:focus:hover .ex-td:last-child,
+.grid-tr-bh.is-check:hover .ex-td:last-child {
+  box-shadow: inset -0.0625em 0 0 #fff, inset 0 0.0625em 0 #fff, inset 0 -0.0625em 0 #fff;
+}

@@ -1,0 +1,1757 @@
+@import 'assets/colors.styl'
+@import 'assets/shapes.styl'
+
+.icon
+    rect 32*PX
+    cursor  pointer
+    position relative
+
+    &.is-not-hoverable
+        cursor  default
+
+
+    &.is-white-bg-on-check
+   		&.is-check
+   			position: relative
+   			&:after
+   				content ''
+   				width: 83%
+   				height: 66%
+   				position absolute
+   				top  17%
+   				left: 8.5%
+   				background-color: rgba(255,255,255,.2)
+   				border-radius: 2px
+
+    &.is-white-bg-on-check-large
+        &.is-check
+            position: relative
+            &:after
+                content ''
+                width: 83%
+                height: 83%
+                position absolute
+                top  8.5%
+                left: 8.5%
+                background-color: rgba(255,255,255,.2)
+                border-radius: 2px
+
+    &.is-glow--onhover
+        &:before
+            content ''
+            position absolute
+            top 0
+            left 0
+            rect 100%
+            opacity 0
+            -webkit-transition: all .17s ease-in-out;
+            -moz-transition: all .17s ease-in-out;
+            -o-transition: all .17s ease-in-out;
+            transition: all .17s ease-in-out;
+
+        &:hover
+            &:before 
+                opacity 1
+    
+    &.is-x1
+        rect 1em
+    &.is-x3
+        rect 5em
+    &.is-u3
+        rect 3*gs
+    &.is-u4
+        rect 4*gs
+    &.is-u6
+        rect 6*gs
+    &.is-20
+        rect 20*PX
+        // rect 22*PX
+        // width 23*PX
+
+    spCount  = 7
+    spCountY = 2
+    /** 97c7bfa9dfaec3880f0b82454e278709 **/
+    &.is-context
+        background: transparent url('../icons/Zone-contrils+misc.png') no-repeat (100/(spCount - 1))*5% top
+        background-size spCount*100% spCountY*100%
+
+    /** 86dcfddaef10085db331747de821d51c **/
+    &.is-gear
+        background: transparent url('../icons/Zone-contrils+misc.png') no-repeat (100/(spCount - 1))*4% top
+        background-size spCount*100% spCountY*100%
+
+        &.is-blue
+            background: transparent url('../icons/Zone-contrils+misc.png') no-repeat (100/(spCount - 1))*4% bottom
+            background-size spCount*100% spCountY*100%
+
+    /** 0f48fb96af75184c41a7f0ce1f303246 **/
+    &.is-arrow-right
+        background: transparent url('../icons/Zone-contrils+misc.png') no-repeat (100/(spCount - 1))*0% top
+        background-size spCount*100% spCountY*100%
+
+        &.is-shadow
+            background: transparent url('../icons/Zone-contrils+misc.png') no-repeat (100/(spCount - 1))*0% bottom
+            background-size spCount*100% spCountY*100%
+
+    /** 3cf599b9282f6dfea8d02158cedb51d9 **/
+    &.is-arrow-left
+        background: transparent url('../icons/Zone-contrils+misc.png') no-repeat (100/(spCount - 1))*1% top
+        background-size spCount*100% spCountY*100%
+
+        &.is-shadow
+            background: transparent url('../icons/Zone-contrils+misc.png') no-repeat (100/(spCount - 1))*1% bottom
+            background-size spCount*100% spCountY*100%
+
+    /** c53aefdd21dd86eca2e8a9e18585b236 **/
+    &.is-resize-vertical
+        background: transparent url('../icons/Zone-contrils+misc.png') no-repeat (100/(spCount - 1))*2% top
+        background-size spCount*100% spCountY*100%
+
+    /** 23721fb2a8e881befd1d007d028c2bda **/
+    &.is-resize-horizontal
+        background: transparent url('../icons/Zone-contrils+misc.png') no-repeat (100/(spCount - 1))*3% top
+        background-size spCount*100% spCountY*100%
+
+     /** 5458c6cd47efaccd0e3a860448ab4e97 **/
+    &.is-proc
+        background: transparent url('../icons/Zone-contrils+misc.png') no-repeat (100/(spCount - 1))*6% top
+        background-size spCount*100% spCountY*100%
+        
+
+    spCount = 18
+    spCountY = 4
+    /*==========  6d93e0e84e44760874d8ee4602b30498  ==========*/
+    &.is-wtool
+        rect 36*PX
+        background: transparent url('../icons/Calypso_tree.png') no-repeat (100/(spCount - 1))*1% top
+        background-size spCount*100% spCountY*100%
+        
+        &.is-blue
+            background: transparent url('../icons/Calypso_tree.png') no-repeat (100/(spCount - 1))*1% (100%/(spCountY - 1)*1)
+            background-size spCount*100% spCountY*100%
+
+        &.is-grey
+            background: transparent url('../icons/Calypso_tree.png') no-repeat (100/(spCount - 1))*1% (100%/(spCountY - 1)*2)
+            background-size spCount*100% spCountY*100%
+
+        &.is-stamp
+            background: transparent url('../icons/Calypso_tree.png') no-repeat (100/(spCount - 1))*1% (100%/(spCountY - 1)*3)
+            background-size spCount*100% spCountY*100%
+
+
+    /*==========  4564466042c64b53fb2d35fd63e75e8b  ==========*/
+    &.is-doctool
+        rect 36*PX
+        background: transparent url('../icons/Calypso_tree.png') no-repeat (100/(spCount - 1))*2% top
+        background-size spCount*100% spCountY*100%
+        
+        &.is-blue
+            background: transparent url('../icons/Calypso_tree.png') no-repeat (100/(spCount - 1))*2% (100%/(spCountY - 1)*1)
+            background-size spCount*100% spCountY*100%
+
+        &.is-grey
+            background: transparent url('../icons/Calypso_tree.png') no-repeat (100/(spCount - 1))*2% (100%/(spCountY - 1)*2)
+            background-size spCount*100% spCountY*100%
+
+        &.is-stamp
+            background: transparent url('../icons/Calypso_tree.png') no-repeat (100/(spCount - 1))*2% (100%/(spCountY - 1)*3)
+            background-size spCount*100% spCountY*100%
+
+    /*==========  46705e5feaffe31f24cf690cf6bd5dda  ==========*/
+    iconIndex = 3
+    &.is-security
+        rect 36*PX
+        background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% top
+        background-size spCount*100% spCountY*100%
+        
+        &.is-blue
+            background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*1)
+            background-size spCount*100% spCountY*100%
+
+        &.is-grey
+            background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*2)
+            background-size spCount*100% spCountY*100%
+
+        &.is-stamp
+            background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*3)
+            background-size spCount*100% spCountY*100%
+
+
+    /*==========  10a10579af74fb1c0c3e1c46e7fba98f  ==========*/
+    iconIndex = 4
+    &.is-box
+        rect 36*PX
+        background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% top
+        background-size spCount*100% spCountY*100%
+        
+        &.is-blue
+            background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*1)
+            background-size spCount*100% spCountY*100%
+
+        &.is-grey
+            background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*2)
+            background-size spCount*100% spCountY*100%
+
+        &.is-stamp
+            background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*3)
+            background-size spCount*100% spCountY*100%
+
+    /*==========  8aaba36d0c45b686bf192ea80c278d8f  ==========*/
+    iconIndex = 5
+    &.is-connect
+        rect 36*PX
+        background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% top
+        background-size spCount*100% spCountY*100%
+        
+        &.is-blue
+            background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*1)
+            background-size spCount*100% spCountY*100%
+
+        &.is-grey
+            background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*2)
+            background-size spCount*100% spCountY*100%
+
+        &.is-stamp
+            background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*3)
+            background-size spCount*100% spCountY*100%
+
+    /*==========  24afe214ad5bdd8535174c64ed119479  ==========*/
+    iconIndex = 6
+    &.is-bio
+        rect 36*PX
+        background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% top
+        background-size spCount*100% spCountY*100%
+        
+        &.is-blue
+            background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*1)
+            background-size spCount*100% spCountY*100%
+
+        &.is-grey
+            background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*2)
+            background-size spCount*100% spCountY*100%
+
+        &.is-stamp
+            background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*3)
+            background-size spCount*100% spCountY*100%
+
+    /*==========  600d6843c2a247b8c94366277742fcb8  ==========*/
+    iconIndex = 7
+    &.is-user
+        rect 36*PX
+        background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% top
+        background-size spCount*100% spCountY*100%
+        
+        &.is-blue
+            background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*1)
+            background-size spCount*100% spCountY*100%
+
+        &.is-grey
+            background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*2)
+            background-size spCount*100% spCountY*100%
+
+        &.is-stamp
+            background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*3)
+            background-size spCount*100% spCountY*100%
+
+    /*==========  70933616857f97ed6d6aa3d27731db4c  ==========*/
+    iconIndex = 8
+    &.is-lock
+        rect 36*PX
+        background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% top
+        background-size spCount*100% spCountY*100%
+        
+        &.is-blue
+            background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*1)
+            background-size spCount*100% spCountY*100%
+
+        &.is-grey
+            background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*2)
+            background-size spCount*100% spCountY*100%
+
+        &.is-stamp
+            background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*3)
+            background-size spCount*100% spCountY*100%
+
+    /*==========  5d3f13749505204c8db26c9e2ff65b52  ==========*/
+    iconIndex = 9
+    &.is-honeycomb
+        rect 36*PX
+        background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% top
+        background-size spCount*100% spCountY*100%
+        
+        &.is-blue
+            background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*1)
+            background-size spCount*100% spCountY*100%
+
+        &.is-grey
+            background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*2)
+            background-size spCount*100% spCountY*100%
+
+        &.is-stamp
+            background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*3)
+            background-size spCount*100% spCountY*100%
+
+
+    /*==========  6b5c60fcc1651600270323d39d91039e  ==========*/
+    iconIndex = 10
+    &.is-award
+        rect 36*PX
+        background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% top
+        background-size spCount*100% spCountY*100%
+        
+        &.is-blue
+            background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*1)
+            background-size spCount*100% spCountY*100%
+
+        &.is-grey
+            background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*2)
+            background-size spCount*100% spCountY*100%
+
+        &.is-stamp
+            background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*3)
+            background-size spCount*100% spCountY*100%
+
+
+    /*==========  17bab5af71520f06f84c4845694b0f81  ==========*/
+    iconIndex = 11
+    &.is-structure
+        rect 36*PX
+        background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% top
+        background-size spCount*100% spCountY*100%
+        
+        &.is-blue
+            background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*1)
+            background-size spCount*100% spCountY*100%
+
+        &.is-grey
+            background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*2)
+            background-size spCount*100% spCountY*100%
+
+        &.is-stamp
+            background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*3)
+            background-size spCount*100% spCountY*100%
+
+
+    /*==========  25a80274b7d7797b9a92d78e17d3e8f2  ==========*/
+    iconIndex = 12
+    &.is-round-arrow
+        rect 36*PX
+        background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% top
+        background-size spCount*100% spCountY*100%
+        
+        &.is-blue
+            background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*1)
+            background-size spCount*100% spCountY*100%
+
+        &.is-grey
+            background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*2)
+            background-size spCount*100% spCountY*100%
+
+        &.is-stamp
+            background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*3)
+            background-size spCount*100% spCountY*100%
+
+
+    /*==========  ec539ab4d704cd934b1a3a469d5003f6  ==========*/
+    iconIndex = 13
+    &.is-document
+        rect 36*PX
+        background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% top
+        background-size spCount*100% spCountY*100%
+        
+        &.is-blue
+            background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*1)
+            background-size spCount*100% spCountY*100%
+
+        &.is-grey
+            background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*2)
+            background-size spCount*100% spCountY*100%
+
+        &.is-stamp
+            background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*3)
+            background-size spCount*100% spCountY*100%
+
+    /*==========  8a8ae55732e7cac42931d168eb2c7b48  ==========*/
+    iconIndex = 14
+    &.is-directory
+        rect 36*PX
+        background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% top
+        background-size spCount*100% spCountY*100%
+        
+        &.is-blue
+            background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*1)
+            background-size spCount*100% spCountY*100%
+
+        &.is-grey
+            background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*2)
+            background-size spCount*100% spCountY*100%
+
+        &.is-stamp
+            background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*3)
+            background-size spCount*100% spCountY*100%
+
+    /*==========  7f62cdcd77e2dc788b52ce1c1b367aa3  ==========*/
+    iconIndex = 15
+    &.is-timer
+        rect 36*PX
+        background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% top
+        background-size spCount*100% spCountY*100%
+        
+        &.is-blue
+            background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*1)
+            background-size spCount*100% spCountY*100%
+
+        &.is-grey
+            background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*2)
+            background-size spCount*100% spCountY*100%
+
+        &.is-stamp
+            background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*3)
+            background-size spCount*100% spCountY*100%
+
+
+    /*==========  b96292a5d4f8b824a3146d606a0350f1  ==========*/
+    iconIndex = 16
+    &.is-monocle-mono
+        rect 36*PX
+        background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% top
+        background-size spCount*100% spCountY*100%
+        
+        &.is-blue
+            background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*1)
+            background-size spCount*100% spCountY*100%
+
+        &.is-grey
+            background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*2)
+            background-size spCount*100% spCountY*100%
+
+        &.is-stamp
+            background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*3)
+            background-size spCount*100% spCountY*100%
+
+    /*==========  6117ca041b41c2cedbf248da0738e1d0  ==========*/
+    iconIndex = 17
+    &.is-monocle
+        rect 36*PX
+        background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% top
+        background-size spCount*100% spCountY*100%
+        
+        &.is-blue
+            background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*1)
+            background-size spCount*100% spCountY*100%
+
+        &.is-grey
+            background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*2)
+            background-size spCount*100% spCountY*100%
+
+        &.is-stamp
+            background: transparent url('../icons/Calypso_tree.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*3)
+            background-size spCount*100% spCountY*100%
+
+
+
+    spCount = 20
+    /*==========  d6ce8669c0105d648a83f2dcea92081c  ==========*/
+    &.is-lbar-navigate
+        background: transparent url('../icons/lbar/sprite.png') no-repeat 0 (100/(spCount - 1))*8%
+        background-size 100% spCount*100%
+       
+        &:hover, &.is-check
+            background: transparent url('../icons/lbar/sprite.png') no-repeat 0 (100/(spCount - 1))*9%
+            background-size 100% spCount*100%
+
+    /*==========  0c104904b2851778dcd62cfd12f9efa2  ==========*/
+    &.is-lbar-resource
+        background: transparent url('../icons/lbar/sprite.png') no-repeat 0 (100/(spCount - 1))*15%
+        background-size 100% spCount*100%
+       
+        &:hover, &.is-check
+            background: transparent url('../icons/lbar/sprite.png') no-repeat 0 (100/(spCount - 1))*14%
+            background-size 100% spCount*100%
+
+    /*==========  6577920985d670cdf0df32cecb896339  ==========*/
+    &.is-lbar-product
+        background: transparent url('../icons/lbar/sprite.png') no-repeat 0 (100/(spCount - 1))*13%
+        background-size 100% spCount*100%
+       
+        &:hover, &.is-check
+            background: transparent url('../icons/lbar/sprite.png') no-repeat 0 (100/(spCount - 1))*12%
+            background-size 100% spCount*100% 
+
+
+    /*==========  00dfb84da9de5acc46f9d5813b9fab8e  ==========*/
+    &.is-lbar-editor
+        background: transparent url('../icons/lbar/sprite.png') no-repeat 0 (100/(spCount - 1))*3%
+        background-size 100% spCount*100%
+       
+        &:hover, &.is-check
+            background: transparent url('../icons/lbar/sprite.png') no-repeat 0 (100/(spCount - 1))*2%
+            background-size 100% spCount*100% 
+
+    /*==========  11eaf78e2c1f595f4514f9a3bfd2ec3e  ==========*/
+    &.is-lbar-tasks
+        background: transparent url('../icons/lbar/sprite.png') no-repeat 0 (100/(spCount - 1))*19%
+        background-size 100% spCount*100%
+       
+        &:hover, &.is-check
+            background: transparent url('../icons/lbar/sprite.png') no-repeat 0 (100/(spCount - 1))*18%
+            background-size 100% spCount*100% 
+
+    /*==========  004c85a124e9376b9bd74bf6a4941863  ==========*/
+    &.is-lbar-clipboard
+        background: transparent url('../icons/lbar/sprite.png') no-repeat 0 (100/(spCount - 1))%
+        background-size 100% spCount*100%
+       
+        &:hover, &.is-check
+            background: transparent url('../icons/lbar/sprite.png') no-repeat 0 0
+            background-size 100% spCount*100% 
+    /*==========  6c5a1cbdac6974963b866a5627c3ff5e  ==========*/
+    &.is-lbar-mail
+        background: transparent url('../icons/lbar/sprite.png') no-repeat 0 (100/(spCount - 1))*11%
+        background-size 100% spCount*100%
+       
+        &:hover, &.is-check
+            background: transparent url('../icons/lbar/sprite.png') no-repeat 0 (100/(spCount - 1))*10%
+            background-size 100% spCount*100% 
+
+    /*==========  4697ba2ad1ff9374fc7ca02334178c1f  ==========*/
+    &.is-lbar-info
+        background: transparent url('../icons/lbar/sprite.png') no-repeat 0 (100/(spCount - 1))*7%
+        background-size 100% spCount*100%
+       
+        &:hover, &.is-check
+            background: transparent url('../icons/lbar/sprite.png') no-repeat 0 (100/(spCount - 1))*6%
+            background-size 100% spCount*100% 
+
+    /*==========  7daca6b2e683a319543da5f56412782b  ==========*/
+    &.is-lbar-search
+        background: transparent url('../icons/lbar/sprite.png') no-repeat 0 (100/(spCount - 1))*17%
+        background-size 100% spCount*100%
+       
+        &:hover, &.is-check
+            background: transparent url('../icons/lbar/sprite.png') no-repeat 0 (100/(spCount - 1))*16%
+            background-size 100% spCount*100% 
+
+
+
+    spCount = 22
+    /*==========  93893d8081d32c44a0401e3426133121  ==========*/
+    &.is-lbar-emk
+        background: transparent url('../icons/lbar/sprite-small.png') no-repeat 0 (100/(spCount - 1))*17%
+        background-size 100% spCount*100%
+       
+        &:hover, &.is-check
+            background: transparent url('../icons/lbar/sprite-small.png') no-repeat 0 (100/(spCount - 1))*16%
+            background-size 100% spCount*100% 
+
+    
+
+    /*==========  7bb607974f9731e00a7387af9e59c937  ==========*/
+    &.is-lbar-build-ok
+        background: transparent url('../icons/lbar/sprite-small.png') no-repeat 0 (100/(spCount - 1))*9%
+        background-size 100% spCount*100%
+       
+        &:hover, &.is-check
+            background: transparent url('../icons/lbar/sprite-small.png') no-repeat 0 (100/(spCount - 1))*8%
+            background-size 100% spCount*100% 
+
+    /*==========  50491b824fd897bd5a6a9e37f4d97801  ==========*/
+    &.is-lbar-build-add
+        background: transparent url('../icons/lbar/sprite-small.png') no-repeat 0 (100/(spCount - 1))*7%
+        background-size 100% spCount*100%
+       
+        &:hover, &.is-check
+            background: transparent url('../icons/lbar/sprite-small.png') no-repeat 0 (100/(spCount - 1))*6%
+            background-size 100% spCount*100% 
+
+    /*==========  2a53254bce19de594b2e59c1e2026008  ==========*/
+    &.is-lbar-add
+        background: transparent url('../icons/lbar/sprite-small.png') no-repeat 0 (100/(spCount - 1))%
+        background-size 100% spCount*100%
+       
+        &:hover, &.is-check
+            background: transparent url('../icons/lbar/sprite-small.png') no-repeat 0 0
+            background-size 100% spCount*100% 
+
+    /*==========  34b925751bc31f7aab9c6a8ba12f0764  ==========*/
+    &.is-lbar-trash
+        background: transparent url('../icons/lbar/sprite-small.png') no-repeat 0 (100/(spCount - 1))*19%
+        background-size 100% spCount*100%
+       
+        &:hover, &.is-check
+            background: transparent url('../icons/lbar/sprite-small.png') no-repeat 0 (100/(spCount - 1))*18%
+            background-size 100% spCount*100% 
+
+     /*==========  6bf0f573f714320ee43a16502adff85d  ==========*/
+    &.is-lbar-cancel
+        background: transparent url('../icons/lbar/sprite-small.png') no-repeat 0 (100/(spCount - 1))*11%
+        background-size 100% spCount*100%
+       
+        &:hover, &.is-check
+            background: transparent url('../icons/lbar/sprite-small.png') no-repeat 0 (100/(spCount - 1))*10%
+            background-size 100% spCount*100% 
+
+    /*==========  c3b95d5cfffd7cc62bf5adf61750a232  ==========*/
+    &.is-lbar-save
+        background: transparent url('../icons/lbar/sprite-small.png') no-repeat 0 (100/(spCount - 1))*17%
+        background-size 100% spCount*100%
+       
+        &:hover, &.is-check
+            background: transparent url('../icons/lbar/sprite-small.png') no-repeat 0 (100/(spCount - 1))*16%
+            background-size 100% spCount*100% 
+
+
+    /*==========  bba93dc3072877612d7ffa04c06d31fd  ==========*/
+    &.is-lbar-edit
+        background: transparent url('../icons/lbar/sprite-small.png') no-repeat 0 (100/(spCount - 1))*13%
+        background-size 100% spCount*100%
+       
+        &:hover, &.is-check
+            background: transparent url('../icons/lbar/sprite-small.png') no-repeat 0 (100/(spCount - 1))*12%
+            background-size 100% spCount*100% 
+
+    /*==========  7aa2626b31bb39c1317fe46befebb44f  ==========*/
+    &.is-lbar-group
+        background: transparent url('../icons/lbar/sprite-small.png') no-repeat 0 (100/(spCount - 1))*15%
+        background-size 100% spCount*100%
+       
+        &:hover, &.is-check
+            background: transparent url('../icons/lbar/sprite-small.png') no-repeat 0 (100/(spCount - 1))*14%
+            background-size 100% spCount*100% 
+
+    /*==========  7c64ed62e5a82c61d3fd67b86dfdc4fe  ==========*/
+    &.is-lbar-tree
+        background: transparent url('../icons/lbar/sprite-small.png') no-repeat 0 (100/(spCount - 1))*21%
+        background-size 100% spCount*100%
+       
+        &:hover, &.is-check
+            background: transparent url('../icons/lbar/sprite-small.png') no-repeat 0 (100/(spCount - 1))*20%
+            background-size 100% spCount*100% 
+    
+    /**
+    
+        EMKS
+    
+    **/
+
+    /*==========  c82e19ff8b9515f31ccaaef3f664306f  ==========*/
+    spCount = 3
+    &.is-pc
+        rect 20*PX
+        background: transparent url('../icons/System_toolbar/emks.png') no-repeat (100/(spCount - 1))*1% 0
+        background-size spCount*100% 100%
+    
+    /*==========  2ef21f6589f851b6352c0763d77ba519  ==========*/
+    &.is-ipad-emk
+        rect 20*PX
+        background: transparent url('../icons/System_toolbar/emks.png') no-repeat (100/(spCount - 1))*0% 0
+        background-size spCount*100% 100%
+
+    /*==========  9b582ef16e7e8a71d6e2be313286db9b  ==========*/
+    &.is-iphone-emk
+        rect 20*PX
+        background: transparent url('../icons/System_toolbar/emks.png') no-repeat (100/(spCount - 1))*2% 0
+        background-size spCount*100% 100%
+
+    /**
+    
+        SYSTEM TOOLBAR
+    
+    **/
+
+    spCount = 6
+    /*==========  f687abb5dc9ce187168d16dcacf645be  ==========*/
+    &.is-wrench
+        rect 36*PX
+        background: transparent url('../icons/System_toolbar/sys_toolbar.png') no-repeat (100/(spCount - 1))*3% 0
+        background-size spCount*100% 200%
+        position relative
+
+        &.is-glow--onhover
+            &:before
+                background: transparent url('../icons/System_toolbar/sys_toolbar.png') no-repeat (100/(spCount - 1))*3% 100%
+                background-size spCount*100% 200%
+       
+        // &:not(.is-check):hover
+        //     background: transparent url('../icons/System_toolbar/sys_toolbar.png') no-repeat (100/(spCount - 1))*3% 100%
+        //     background-size spCount*100% 200%
+   
+    /*==========  ebf2e8239ee3227347f08b283efe2fc0  ==========*/
+    &.is-coral
+        rect 36*PX
+        background: transparent url('../icons/System_toolbar/sys_toolbar.png') no-repeat (100/(spCount - 1))*1% 0
+        background-size spCount*100% 200%
+
+        &.is-glow--onhover
+            &:before
+                background: transparent url('../icons/System_toolbar/sys_toolbar.png') no-repeat (100/(spCount - 1))*1% 100%
+                background-size spCount*100% 200%
+
+       
+        // &:not(.is-check):hover
+        //     background: transparent url('../icons/System_toolbar/sys_toolbar.png') no-repeat (100/(spCount - 1))*1% 100%
+        //     background-size spCount*100% 200%
+
+
+    /*==========  7f236ffaa2be514f60df65766b27a712  ==========*/
+    &.is-compass
+        rect 36*PX
+        background: transparent url('../icons/System_toolbar/sys_toolbar.png') no-repeat (100/(spCount - 1))*0% 0
+        background-size spCount*100% 200%
+
+        &.is-glow--onhover
+            &:before
+                background: transparent url('../icons/System_toolbar/sys_toolbar.png') no-repeat (100/(spCount - 1))*0% 100%
+                background-size spCount*100% 200%
+       
+        // &:not(.is-check):hover
+        //     background: transparent url('../icons/System_toolbar/sys_toolbar.png') no-repeat (100/(spCount - 1))*0% 100%
+        //     background-size spCount*100% 200%
+    
+    /*==========  b5f6ec9b6d177c29b57a14efde834766  ==========*/
+    &.is-save-menu
+        rect 36*PX
+
+        background: transparent url('../icons/System_toolbar/sys_toolbar.png') no-repeat (100/(spCount - 1))*4% 0
+        background-size spCount*100% 200%
+
+        &.is-glow--onhover
+            &:before
+                background: transparent url('../icons/System_toolbar/sys_toolbar.png') no-repeat (100/(spCount - 1))*4% 100%
+                background-size spCount*100% 200%
+       
+        // &:not(.is-check):hover
+        //     background: transparent url('../icons/System_toolbar/sys_toolbar.png') no-repeat (100/(spCount - 1))*4% 100%
+        //     background-size spCount*100% 200%
+    
+    /*==========  89e8f34970a3882ca18bda0ba15cc64e  ==========*/
+    &.is-process
+        rect 36*PX
+
+        background: transparent url('../icons/System_toolbar/sys_toolbar.png') no-repeat (100/(spCount - 1))*2% 0
+        background-size spCount*100% 200%
+
+        &.is-glow--onhover
+            &:before
+                background: transparent url('../icons/System_toolbar/sys_toolbar.png') no-repeat (100/(spCount - 1))*2% 100%
+                background-size spCount*100% 200%
+       
+        // &:not(.is-check):hover
+        //     background: transparent url('../icons/System_toolbar/sys_toolbar.png') no-repeat (100/(spCount - 1))*2% 100%
+        //     background-size spCount*100% 200%
+    
+    /*==========  678b5126c0532d668b01376831d523dd  ==========*/
+    &.is-led
+        rect 36*PX
+        background: transparent url('../icons/System_toolbar/sys_toolbar.png') no-repeat (100/(spCount - 1))*5% 0
+        background-size spCount*100% 200%
+       
+        &.is-check
+            background: transparent url('../icons/System_toolbar/sys_toolbar.png') no-repeat (100/(spCount - 1))*5% 100%
+            background-size spCount*100% 200%
+
+       
+
+    /**
+    
+        TOOLS
+        sprite: ui-kit/icons/Tollbar-designer_v2e.png
+    
+    **/
+    
+    spCount = 37
+    spCountY = 6
+    /*==========  06ee639ff51d170b2528dda542be2105  ==========*/
+    &.is-remove-border
+        rect 36*PX
+        background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*0% 0
+        background-size spCount*100% spCountY*100%
+
+        &.is-glow--onhover
+            &:before
+                background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*0% (100%/(spCountY - 1))
+                background-size spCount*100% spCountY*100%
+       
+        // &:not(.is-check):hover
+        //     background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*0% (100%/(spCountY - 1))
+        //     background-size spCount*100% spCountY*100%
+    
+    /*==========  8dc82e74d12878a24cc22df012211498  ==========*/
+    &.is-one-up
+        rect 36*PX
+
+        background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*1% 0
+        background-size spCount*100% spCountY*100%
+
+
+        &.is-glow--onhover
+            &:before
+                background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*1% (100%/(spCountY - 1))
+                background-size spCount*100% spCountY*100%
+       
+        // &:not(.is-check):hover
+        //     background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*1% (100%/(spCountY - 1))
+        //     background-size spCount*100% spCountY*100%
+
+    /*==========  59307c225526a20b61f1a101b3ed6e36  ==========*/
+    &.is-mouse-default
+        rect 36*PX
+
+        background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*2% 0
+        background-size spCount*100% spCountY*100%
+
+        &.is-glow--onhover
+            &:before
+                background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*2% (100%/(spCountY - 1))
+                background-size spCount*100% spCountY*100%
+       
+        // &:not(.is-check):hover
+        //     background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*2% (100%/(spCountY - 1))
+        //     background-size spCount*100% spCountY*100%
+
+    /*==========  988ae3630661a471263c1bcd02f6c48e  ==========*/
+    &.is-trash
+        rect 36*PX
+
+        background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*3% 0
+        background-size spCount*100% spCountY*100%
+
+        &.is-glow--onhover
+            &:before
+                background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*3% (100%/(spCountY - 1))
+                background-size spCount*100% spCountY*100%
+       
+        // &:not(.is-check):hover
+        //     background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*3% (100%/(spCountY - 1))
+        //     background-size spCount*100% spCountY*100%
+
+    
+    /*==========  be042b3fda8e52be93903a02bba6eb7b  ==========*/
+    &.is-table
+        rect 36*PX
+
+        background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*4% 0
+        background-size spCount*100% spCountY*100%
+
+        &.is-glow--onhover
+            &:before
+                background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*4% (100%/(spCountY - 1))
+                background-size spCount*100% spCountY*100%
+       
+        // &:not(.is-check):hover
+        //     background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*4% (100%/(spCountY - 1))
+        //     background-size spCount*100% spCountY*100%
+
+        &.is-white, .is-tree-item-b-check &.is-blue
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*4% (100%/(spCountY - 1)*2)
+            background-size spCount*100% spCountY*100%
+
+        &.is-blue
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*4% (100%/(spCountY - 1)*3)
+            background-size spCount*100% spCountY*100%
+
+        &.is-blue-stamp
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*4% (100%/(spCountY - 1)*4)
+            background-size spCount*100% spCountY*100%
+
+
+    /*==========  25ab872dd16c92f6f5492c05cedd1d59  ==========*/
+    &.is-tree
+        rect 36*PX
+
+        background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*5% 0
+        background-size spCount*100% spCountY*100%
+
+        &.is-glow--onhover
+            &:before
+                background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*5% (100%/(spCountY - 1))
+                background-size spCount*100% spCountY*100%
+       
+        // &:not(.is-check):hover
+        //     background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*5% (100%/(spCountY - 1))
+        //     background-size spCount*100% spCountY*100%
+
+        &.is-white, .is-tree-item-b-check &.is-blue
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*5% (100%/(spCountY - 1)*2)
+            background-size spCount*100% spCountY*100%
+
+        &.is-blue
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*5% (100%/(spCountY - 1)*3)
+            background-size spCount*100% spCountY*100%
+
+        &.is-blue-stamp
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*5% (100%/(spCountY - 1)*4)
+            background-size spCount*100% spCountY*100%
+
+    /*==========  aa27ee60c467b0e62a09c0db099cd095  ==========*/
+    &.is-window
+        rect 36*PX
+
+        background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*6% 0
+        background-size spCount*100% spCountY*100%
+
+        &.is-glow--onhover
+            &:before
+                background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*6% (100%/(spCountY - 1))
+                background-size spCount*100% spCountY*100%
+       
+        // &:not(.is-check):hover
+        //     background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*6% (100%/(spCountY - 1))
+        //     background-size spCount*100% spCountY*100%
+
+        &.is-white, .is-tree-item-b-check &.is-blue
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*6% (100%/(spCountY - 1)*2)
+            background-size spCount*100% spCountY*100%
+
+        &.is-blue
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*6% (100%/(spCountY - 1)*3)
+            background-size spCount*100% spCountY*100%
+
+        &.is-blue-stamp
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*6% (100%/(spCountY - 1)*4)
+            background-size spCount*100% spCountY*100%
+
+
+    /*==========  3302d5e1ae7b55f53d7758128d9d1a13  ==========*/
+    &.is-ticket
+        rect 36*PX
+
+        background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*7% 0
+        background-size spCount*100% spCountY*100%
+
+        &.is-glow--onhover
+            &:before
+                background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*7% (100%/(spCountY - 1))
+                background-size spCount*100% spCountY*100%
+       
+        // &:not(.is-check):hover
+        //     background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*7% (100%/(spCountY - 1))
+        //     background-size spCount*100% spCountY*100%
+
+        &.is-white, .is-tree-item-b-check &.is-blue
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*7% (100%/(spCountY - 1)*2)
+            background-size spCount*100% spCountY*100%
+
+        &.is-blue
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*7% (100%/(spCountY - 1)*3)
+            background-size spCount*100% spCountY*100%
+
+        &.is-blue-stamp
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*7% (100%/(spCountY - 1)*4)
+            background-size spCount*100% spCountY*100%
+
+    /*==========  a1ec71f716ebddc8ca46c1d57ca7bb9b  ==========*/
+    &.is-word
+        rect 36*PX
+
+        background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*8% 0
+        background-size spCount*100% spCountY*100%
+
+        &.is-glow--onhover
+            &:before
+                background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*8% (100%/(spCountY - 1))
+                background-size spCount*100% spCountY*100%
+       
+        // &:not(.is-check):hover
+        //     background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*8% (100%/(spCountY - 1))
+        //     background-size spCount*100% spCountY*100%
+
+        &.is-white, .is-tree-item-b-check &.is-blue
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*8% (100%/(spCountY - 1)*2)
+            background-size spCount*100% spCountY*100%
+
+        &.is-blue
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*8% (100%/(spCountY - 1)*3)
+            background-size spCount*100% spCountY*100%
+
+        &.is-blue-stamp
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*8% (100%/(spCountY - 1)*4)
+            background-size spCount*100% spCountY*100%
+
+    /*==========  6ae6cf5e076c58f328aea10f95d4960f  ==========*/
+    &.is-soap
+        rect 36*PX
+
+        background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*9% 0
+        background-size spCount*100% spCountY*100%
+
+        &.is-glow--onhover
+            &:before
+                background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*9% (100%/(spCountY - 1))
+                background-size spCount*100% spCountY*100%
+
+        // &:not(.is-check):hover
+        //     background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*9% (100%/(spCountY - 1))
+        //     background-size spCount*100% spCountY*100%
+
+        &.is-white, .is-tree-item-b-check &.is-blue
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*9% (100%/(spCountY - 1)*2)
+            background-size spCount*100% spCountY*100%
+
+        &.is-blue
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*9% (100%/(spCountY - 1)*3)
+            background-size spCount*100% spCountY*100%
+
+        &.is-blue-stamp
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*9% (100%/(spCountY - 1)*4)
+            background-size spCount*100% spCountY*100%
+
+    /*==========  8d1d759d7cb5af0a115f82b7c4dbdb4a  ==========*/
+    &.is-A-in-rect
+        rect 36*PX
+
+        background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*10% 0
+        background-size spCount*100% spCountY*100%
+
+        &.is-glow--onhover
+            &:before
+                background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*10% (100%/(spCountY - 1))
+                background-size spCount*100% spCountY*100%
+       
+        // &:not(.is-check):hover
+        //     background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*10% (100%/(spCountY - 1))
+        //     background-size spCount*100% spCountY*100%
+
+        &.is-white, .is-tree-item-b-check &.is-blue
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*10% (100%/(spCountY - 1)*2)
+            background-size spCount*100% spCountY*100%
+
+        &.is-blue
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*10% (100%/(spCountY - 1)*3)
+            background-size spCount*100% spCountY*100%
+
+        &.is-blue-stamp
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*10% (100%/(spCountY - 1)*4)
+            background-size spCount*100% spCountY*100%
+
+
+    /*==========  43f01581c53f3695955e588c30582142  ==========*/
+    &.is-dropdown-in-rect
+        rect 36*PX
+
+        background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*11% 0
+        background-size spCount*100% spCountY*100%
+
+        &.is-glow--onhover
+            &:before
+                background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*11% (100%/(spCountY - 1))
+                background-size spCount*100% spCountY*100%
+       
+        // &:not(.is-check):hover
+        //     background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*11% (100%/(spCountY - 1))
+        //     background-size spCount*100% spCountY*100%
+
+        &.is-white, .is-tree-item-b-check &.is-blue
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*11% (100%/(spCountY - 1)*2)
+            background-size spCount*100% spCountY*100%
+
+        &.is-blue
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*11% (100%/(spCountY - 1)*3)
+            background-size spCount*100% spCountY*100%
+
+        &.is-blue-stamp
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*11% (100%/(spCountY - 1)*4)
+            background-size spCount*100% spCountY*100%
+
+    /*==========  93c683c76eb198cbdf3ed4354b002653  ==========*/
+    &.is-server-sync
+        rect 36*PX
+
+        background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*12% 0
+        background-size spCount*100% spCountY*100%
+
+        &.is-glow--onhover
+            &:before
+                background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*12% (100%/(spCountY - 1))
+                background-size spCount*100% spCountY*100%
+       
+        // &:not(.is-check):hover
+        //     background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*12% (100%/(spCountY - 1))
+        //     background-size spCount*100% spCountY*100%
+
+
+    /*==========  2e727cc9cfc91a4a11e1e6d417598f7a  ==========*/
+    &.is-save
+        rect 36*PX
+
+        background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*13% 0
+        background-size spCount*100% spCountY*100%
+
+        &.is-glow--onhover
+            &:before
+                background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*13% (100%/(spCountY - 1))
+                background-size spCount*100% spCountY*100%
+       
+        // &:not(.is-check):hover
+        //     background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*13% (100%/(spCountY - 1))
+        //     background-size spCount*100% spCountY*100%
+
+    /*==========  839189e64009f03f32aca6220484e6ae  ==========*/
+    &.is-eye
+        rect 36*PX
+
+        background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*14% 0
+        background-size spCount*100% spCountY*100%
+
+        &.is-glow--onhover
+            &:before
+                background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*14% (100%/(spCountY - 1))
+                background-size spCount*100% spCountY*100%
+       
+        // &:not(.is-check):hover
+        //     background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*14% (100%/(spCountY - 1))
+        //     background-size spCount*100% spCountY*100%
+
+    /*==========  3d7dda4e6bce041418f1395eab6de1e5  ==========*/
+    &.is-framed-soap
+        rect 36*PX
+
+        background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*15% 0
+        background-size spCount*100% spCountY*100%
+
+        &.is-glow--onhover
+            &:before
+                background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*15% (100%/(spCountY - 1))
+                background-size spCount*100% spCountY*100%
+       
+        // &:not(.is-check):hover
+        //     background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*15% (100%/(spCountY - 1))
+        //     background-size spCount*100% spCountY*100%
+
+        &.is-white, .is-tree-item-b-check &.is-blue
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*15% (100%/(spCountY - 1)*2)
+            background-size spCount*100% spCountY*100%
+
+        &.is-blue
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*15% (100%/(spCountY - 1)*3)
+            background-size spCount*100% spCountY*100%
+
+        &.is-blue-stamp
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*15% (100%/(spCountY - 1)*4)
+            background-size spCount*100% spCountY*100%
+
+    /*==========  91210dfda61b1dd264a2da9ce816cb81  ==========*/
+    &.is-calendar
+        rect 36*PX
+
+        background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*16% 0
+        background-size spCount*100% spCountY*100%
+
+        &.is-glow--onhover
+            &:before
+                background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*16% (100%/(spCountY - 1))
+                background-size spCount*100% spCountY*100%
+       
+        // &:not(.is-check):hover
+        //     background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*16% (100%/(spCountY - 1))
+        //     background-size spCount*100% spCountY*100%
+
+        &.is-white, .is-tree-item-b-check &.is-blue
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*16% (100%/(spCountY - 1)*2)
+            background-size spCount*100% spCountY*100%
+
+        &.is-blue
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*16% (100%/(spCountY - 1)*3)
+            background-size spCount*100% spCountY*100%
+
+        &.is-blue-stamp
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*16% (100%/(spCountY - 1)*4)
+            background-size spCount*100% spCountY*100%
+
+    /*==========  45aa777214e2e2062c956d3331464a3b  ==========*/
+    &.is-frame
+        rect 36*PX
+
+        background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*17% 0
+        background-size spCount*100% spCountY*100%
+
+
+        &.is-glow--onhover
+            &:before
+                background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*17% (100%/(spCountY - 1))
+                background-size spCount*100% spCountY*100%
+       
+        // &:not(.is-check):hover
+        //     background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*17% (100%/(spCountY - 1))
+        //     background-size spCount*100% spCountY*100%
+
+        &.is-white, .is-tree-item-b-check &.is-blue
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*17% (100%/(spCountY - 1)*2)
+            background-size spCount*100% spCountY*100%
+
+        &.is-blue
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*17% (100%/(spCountY - 1)*3)
+            background-size spCount*100% spCountY*100%
+
+        &.is-blue-stamp
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*17% (100%/(spCountY - 1)*4)
+            background-size spCount*100% spCountY*100%
+
+    /*==========  53ceba63c7bf0ec95b764a98b8395048  ==========*/
+    &.is-double-frame
+        rect 36*PX
+
+        background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*18% 0
+        background-size spCount*100% spCountY*100%
+
+        &.is-glow--onhover
+            &:before
+                background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*18% (100%/(spCountY - 1))
+                background-size spCount*100% spCountY*100%
+       
+        // &:not(.is-check):hover
+        //     background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*18% (100%/(spCountY - 1))
+        //     background-size spCount*100% spCountY*100%
+
+        &.is-white, .is-tree-item-b-check &.is-blue
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*18% (100%/(spCountY - 1)*2)
+            background-size spCount*100% spCountY*100%
+
+        &.is-blue
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*18% (100%/(spCountY - 1)*3)
+            background-size spCount*100% spCountY*100%
+
+        &.is-blue-stamp
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*18% (100%/(spCountY - 1)*4)
+            background-size spCount*100% spCountY*100%
+    
+
+
+    /*==========  f0ac30a3f72116fc8ff69fa07b1d746c  ==========*/
+    &.is-hor-split
+        rect 36*PX
+
+        background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*19% 0
+        background-size spCount*100% spCountY*100%
+
+        &.is-glow--onhover
+            &:before
+                background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*19% (100%/(spCountY - 1))
+                background-size spCount*100% spCountY*100%
+       
+        // &:not(.is-check):hover
+        //     background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*19% (100%/(spCountY - 1))
+        //     background-size spCount*100% spCountY*100%
+
+        &.is-white, .is-tree-item-b-check &.is-blue
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*19% (100%/(spCountY - 1)*2)
+            background-size spCount*100% spCountY*100%
+
+        &.is-blue
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*19% (100%/(spCountY - 1)*3)
+            background-size spCount*100% spCountY*100%
+
+        &.is-blue-stamp
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*19% (100%/(spCountY - 1)*4)
+            background-size spCount*100% spCountY*100%
+
+    /*==========  fe7954541c38233256a293711a98c65a  ==========*/
+    &.is-vert-split
+        rect 36*PX
+
+        background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*20% 0
+        background-size spCount*100% spCountY*100%
+
+        &.is-glow--onhover
+            &:before
+                background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*20% (100%/(spCountY - 1))
+                background-size spCount*100% spCountY*100%
+       
+        // &:not(.is-check):hover
+        //     background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*20% (100%/(spCountY - 1))
+        //     background-size spCount*100% spCountY*100%
+
+        &.is-white, .is-tree-item-b-check &.is-blue
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*20% (100%/(spCountY - 1)*2)
+            background-size spCount*100% spCountY*100%
+
+        &.is-blue
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*20% (100%/(spCountY - 1)*3)
+            background-size spCount*100% spCountY*100%
+
+        &.is-blue-stamp
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*20% (100%/(spCountY - 1)*4)
+            background-size spCount*100% spCountY*100%
+
+    /*==========  709dd15a03b905b296edbff5ff54920b  ==========*/
+    &.is-window-div
+        rect 36*PX
+
+        background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*21% 0
+        background-size spCount*100% spCountY*100%
+
+        &.is-glow--onhover
+            &:before
+                background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*21% (100%/(spCountY - 1))
+                background-size spCount*100% spCountY*100%
+       
+        // &:not(.is-check):hover
+        //     background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*21% (100%/(spCountY - 1))
+        //     background-size spCount*100% spCountY*100%
+
+        &.is-white, .is-tree-item-b-check &.is-blue
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*21% (100%/(spCountY - 1)*2)
+            background-size spCount*100% spCountY*100%
+
+        &.is-blue
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*21% (100%/(spCountY - 1)*3)
+            background-size spCount*100% spCountY*100%
+
+        &.is-blue-stamp
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*21% (100%/(spCountY - 1)*4)
+            background-size spCount*100% spCountY*100%
+
+    /*==========  e10533ad0f5e9b5ee8449150e4d929cc  ==========*/
+    &.is-datamodel
+        rect 36*PX
+
+        background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*22% 0
+        background-size spCount*100% spCountY*100%
+
+        &.is-glow--onhover
+            &:before
+                background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*22% (100%/(spCountY - 1))
+                background-size spCount*100% spCountY*100%
+       
+        // &:not(.is-check):hover
+        //     background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*22% (100%/(spCountY - 1))
+        //     background-size spCount*100% spCountY*100%
+
+        &.is-white, .is-tree-item-b-check &.is-blue
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*22% (100%/(spCountY - 1)*2)
+            background-size spCount*100% spCountY*100%
+
+        &.is-blue
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*22% (100%/(spCountY - 1)*3)
+            background-size spCount*100% spCountY*100%
+
+        &.is-blue-stamp
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*22% (100%/(spCountY - 1)*4)
+            background-size spCount*100% spCountY*100%
+
+    /*==========  63f62dd96152c608ca2a532d68ac1bf5  ==========*/
+    &.is-row
+        rect 36*PX
+
+        background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*23% 0
+        background-size spCount*100% spCountY*100%
+
+        &.is-glow--onhover
+            &:before
+                background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*23% (100%/(spCountY - 1))
+                background-size spCount*100% spCountY*100%
+       
+        // &:not(.is-check):hover
+        //     background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*23% (100%/(spCountY - 1))
+        //     background-size spCount*100% spCountY*100%
+
+        &.is-white, .is-tree-item-b-check &.is-blue
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*23% (100%/(spCountY - 1)*2)
+            background-size spCount*100% spCountY*100%
+
+        &.is-blue
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*23% (100%/(spCountY - 1)*3)
+            background-size spCount*100% spCountY*100%
+
+        &.is-blue-stamp
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*23% (100%/(spCountY - 1)*4)
+            background-size spCount*100% spCountY*100%
+
+    /*==========  dc27364370b29506c554a534b63ba22c  ==========*/
+    &.is-input
+        rect 36*PX
+
+        background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*24% 0
+        background-size spCount*100% spCountY*100%
+
+        &.is-glow--onhover
+            &:before
+                background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*24% (100%/(spCountY - 1))
+                background-size spCount*100% spCountY*100%
+       
+        // &:not(.is-check):hover
+        //     background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*24% (100%/(spCountY - 1))
+        //     background-size spCount*100% spCountY*100%
+
+        &.is-white, .is-tree-item-b-check &.is-blue
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*24% (100%/(spCountY - 1)*2)
+            background-size spCount*100% spCountY*100%
+
+        &.is-blue
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*24% (100%/(spCountY - 1)*3)
+            background-size spCount*100% spCountY*100%
+
+        &.is-blue-stamp
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*24% (100%/(spCountY - 1)*4)
+            background-size spCount*100% spCountY*100%
+
+    /*==========  8c0777bdbd57d05a64d1e0cf3a1b0e15  ==========*/
+    &.is-panels
+        rect 36*PX
+
+        background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*25% 0
+        background-size spCount*100% spCountY*100%
+
+        &.is-glow--onhover
+            &:before
+                background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*25% (100%/(spCountY - 1))
+                background-size spCount*100% spCountY*100%
+       
+        // &:not(.is-check):hover
+        //     background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*25% (100%/(spCountY - 1))
+        //     background-size spCount*100% spCountY*100%
+
+        &.is-white, .is-tree-item-b-check &.is-blue
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*25% (100%/(spCountY - 1)*2)
+            background-size spCount*100% spCountY*100%
+
+        &.is-blue
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*25% (100%/(spCountY - 1)*3)
+            background-size spCount*100% spCountY*100%
+
+        &.is-blue-stamp
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat (100/(spCount - 1))*25% (100%/(spCountY - 1)*4)
+            background-size spCount*100% spCountY*100%
+
+    iconIndex = 26
+    /*==========  86b37325b57594290bcbcc73e9d841d1  ==========*/
+    &.is-grid
+        rect 36*PX
+        background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat ((100/(spCount - 1))*iconIndex)% 0
+        background-size spCount*100% spCountY*100%
+
+        &.is-glow--onhover
+            &:before
+                background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1))
+                background-size spCount*100% spCountY*100%
+       
+
+        &.is-white, .is-tree-item-b-check &.is-blue
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*2)
+            background-size spCount*100% spCountY*100%
+
+        &.is-blue
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*3)
+            background-size spCount*100% spCountY*100%
+
+        &.is-blue-stamp
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*4)
+            background-size spCount*100% spCountY*100%
+
+    iconIndex = 27
+    /*==========  6d17c8beaf27d04cda84df5cbe9ea573  ==========*/
+    &.is-picture
+        rect 36*PX
+        background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat ((100/(spCount - 1))*iconIndex)% 0
+        background-size spCount*100% spCountY*100%
+
+        &.is-glow--onhover
+            &:before
+                background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1))
+                background-size spCount*100% spCountY*100%
+       
+
+        &.is-white, .is-tree-item-b-check &.is-blue
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*2)
+            background-size spCount*100% spCountY*100%
+
+        &.is-blue
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*3)
+            background-size spCount*100% spCountY*100%
+
+        &.is-blue-stamp
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*4)
+            background-size spCount*100% spCountY*100%
+
+    iconIndex = 28
+    /*==========  6834f39a018665dda98d702fc32faa18  ==========*/
+    &.is-graph
+        rect 36*PX
+        background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat ((100/(spCount - 1))*iconIndex)% 0
+        background-size spCount*100% spCountY*100%
+
+        &.is-glow--onhover
+            &:before
+                background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1))
+                background-size spCount*100% spCountY*100%
+       
+
+        &.is-white, .is-tree-item-b-check &.is-blue
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*2)
+            background-size spCount*100% spCountY*100%
+
+        &.is-blue
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*3)
+            background-size spCount*100% spCountY*100%
+
+        &.is-blue-stamp
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*4)
+            background-size spCount*100% spCountY*100%
+
+    iconIndex = 29
+    /*==========  e1de9fc9d67ebc1491300a0fbcd46359  ==========*/
+    &.is-edit-pic
+        rect 36*PX
+        background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat ((100/(spCount - 1))*iconIndex)% 0
+        background-size spCount*100% spCountY*100%
+
+        &.is-glow--onhover
+            &:before
+                background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1))
+                background-size spCount*100% spCountY*100%
+       
+
+        &.is-white, .is-tree-item-b-check &.is-blue
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*2)
+            background-size spCount*100% spCountY*100%
+
+        &.is-blue
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*3)
+            background-size spCount*100% spCountY*100%
+
+        &.is-blue-stamp
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*4)
+            background-size spCount*100% spCountY*100%
+
+    iconIndex = 30
+    /*==========  eec0f67105da6171d73982938e61a9cd  ==========*/
+    &.is-tetris
+        rect 36*PX
+        background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat ((100/(spCount - 1))*iconIndex)% 0
+        background-size spCount*100% spCountY*100%
+
+        &.is-glow--onhover
+            &:before
+                background: transparent url('../icons/Tollbar-designer_v2e.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1))
+                background-size spCount*100% spCountY*100%
+       
+
+        &.is-white, .is-tree-item-b-check &.is-blue
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*2)
+            background-size spCount*100% spCountY*100%
+
+        &.is-blue
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*3)
+            background-size spCount*100% spCountY*100%
+
+        &.is-blue-stamp
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*4)
+            background-size spCount*100% spCountY*100%
+
+    iconIndex = 31
+    /*==========  cd8de2957ae0a23313b4deca4c850593  ==========*/
+    &.is-down-minus
+        rect 36*PX
+        
+        &.is-blue-stamp
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*4)
+            background-size spCount*100% spCountY*100%
+
+            &:hover
+                background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*5)
+                background-size spCount*100% spCountY*100%
+
+        &.is-blue-stamp2
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*5)
+            background-size spCount*100% spCountY*100%
+    
+    iconIndex = 32
+    /*==========  de6c202008534073476fe3306170df05  ==========*/
+    &.is-up-minus
+        rect 36*PX
+        
+        &.is-blue-stamp
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*4)
+            background-size spCount*100% spCountY*100%
+
+            &:hover
+                background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*5)
+                background-size spCount*100% spCountY*100%
+
+        &.is-blue-stamp2
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*5)
+            background-size spCount*100% spCountY*100%
+    
+    iconIndex = 33
+    /*==========  991d36f98e4102e7f37dd9b641dfdefd  ==========*/
+    &.is-add
+        rect 36*PX
+
+        &.is-blue-stamp
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*4)
+            background-size spCount*100% spCountY*100%
+
+            &:hover
+                background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*5)
+                background-size spCount*100% spCountY*100%
+
+        &.is-blue-stamp2
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*5)
+            background-size spCount*100% spCountY*100%
+    
+    iconIndex = 34
+    /*==========  64b804de636611813956db24080dc1f5  ==========*/
+    &.is-delete
+        rect 36*PX
+
+        &.is-blue-stamp
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*4)
+            background-size spCount*100% spCountY*100%
+
+            &:hover
+                background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*5)
+                background-size spCount*100% spCountY*100%
+
+        &.is-blue-stamp2
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*5)
+            background-size spCount*100% spCountY*100%
+    
+
+    &.is-table-dark
+        background: transparent url('../icons/64x64_0004s_0014_Grid.png') no-repeat center center
+        background-size 100%
+
+    iconIndex = 35
+    /*==========  381c44a1b490038f59d2c685ebd1d453  ==========*/
+    &.is-tree-open
+        rect 36*PX
+
+        &.is-blue-stamp
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*4)
+            background-size spCount*100% spCountY*100%
+
+            &:hover
+                background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*5)
+                background-size spCount*100% spCountY*100%
+
+        &.is-blue-stamp2
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*5)
+            background-size spCount*100% spCountY*100%
+
+    iconIndex = 36
+    /*==========  c4a73126aaa0ed330c604a2dea0f3979  ==========*/
+    &.is-tree-close
+        rect 36*PX
+
+        &.is-blue-stamp
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*4)
+            background-size spCount*100% spCountY*100%
+
+            &:hover
+                background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*5)
+                background-size spCount*100% spCountY*100%
+
+        &.is-blue-stamp2
+            background:transparent url('../icons/Tollbar-designer_v2e.png') no-repeat ((100/(spCount - 1))*iconIndex)% (100%/(spCountY - 1)*5)
+            background-size spCount*100% spCountY*100%
+
+    
+    /**
+    
+        TOOLS ENDS
+    
+    **/
+       
+
+       
+
+    spCount = 3
+    &.is-imac
+        width 4.25em
+        height 4em
+        background: transparent url('../icons/Devices/devices.png') no-repeat (100/(spCount - 1))*0% 0
+        background-size spCount*100% 400%
+
+        &.is-glow--onhover, &.is-check
+            &:before
+                background: transparent url('../icons/Devices/devices.png') no-repeat (100/(spCount - 1))*0% (100/(spCount))%
+                background-size spCount*100% 400%
+
+        &:after
+            content:''
+            position: absolute
+            z-index: -1
+            top:1em
+            left:.75em
+            width: 2.75em
+            height: 1.6em
+       
+    &.is-iphone
+        width 4.25em
+        height 4em
+        background: transparent url('../icons/Devices/devices.png') no-repeat (100/(spCount - 1))*2% 0
+        background-size spCount*100% 400%
+
+        &.is-glow--onhover, &.is-check
+            &:before
+                background: transparent url('../icons/Devices/devices.png') no-repeat (100/(spCount - 1))*2% (100/(spCount))%
+                background-size spCount*100% 400%
+        
+        &:after
+            content:''
+            position: absolute
+            z-index: -1
+            top:1em
+            left:1.5em
+            width: 1.4em
+            height: 2.2em
+
+    &.is-ipad
+        width 4.25em
+        height 4em
+        background: transparent url('../icons/Devices/devices.png') no-repeat (100/(spCount - 1))*1% 0
+        background-size spCount*100% 400%
+
+        &.is-glow--onhover, &.is-check
+            &:before
+                background: transparent url('../icons/Devices/devices.png') no-repeat (100/(spCount - 1))*1% (100/(spCount))%
+                background-size spCount*100% 400%
+       
+
+        &:after
+            content:''
+            position: absolute
+            z-index: -1
+            top:1em
+            left:1.25em
+            width: 1.75em
+            height: 2em
+    
+    /*==========  a9363b6a3f23d0c40c9d5f4860208903  ==========*/
+    &.is-inactive-device
+        &:after
+            background: rgb(154,179,212); /* Old browsers */
+            /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+            // background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzlhYjNkNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM5N2FjYzkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+            background: -moz-linear-gradient(top,  rgba(154,179,212,1) 0%, rgba(151,172,201,1) 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(154,179,212,1)), color-stop(100%,rgba(151,172,201,1))); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top,  rgba(154,179,212,1) 0%,rgba(151,172,201,1) 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top,  rgba(154,179,212,1) 0%,rgba(151,172,201,1) 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top,  rgba(154,179,212,1) 0%,rgba(151,172,201,1) 100%); /* IE10+ */
+            background: linear-gradient(to bottom,  rgba(154,179,212,1) 0%,rgba(151,172,201,1) 100%); /* W3C */
+            // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9ab3d4', endColorstr='#97acc9',GradientType=0 ); /* IE6-8 */
+
+
+    &.is-pink-bg
+        &:after
+            background-color pink
+
+    &.is-green-bg
+        &:after
+            background-color c-green
+
+    &.is-cyan-bg
+        &:after
+            background-color c-cyan
+
+    &.is-yellow-bg
+        &:after
+            background-color c-yellow
+
+    &.is-blue-sky-bg
+        &:after
+            background-color c-blue-sky
+
+    &.is-blue-grey-bg
+        &:after
+            background-color c-blue-grey

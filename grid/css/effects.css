@@ -1,0 +1,86 @@
+.shadow1-eff {
+  box-shadow: 0 0.0625em 0.4375em rgba(74,119,175,0.4);
+}
+.inactive-focus-eff {
+  color: #fff;
+  position: relative;
+  background: url("../icons/inactive-focus-pattern.png") repeat-x left top;
+  background-size: auto 100%;
+}
+.steel-bg-eff {
+  position: relative;
+  bottom: 0;
+  border: 1px solid #555;
+  background-color: #cfd1d5;
+  box-shadow: inset 0 1px rgba(255,255,255,0.43), 0 -2px 5px rgba(0,0,0,0.06);
+}
+.steel-bg-eff:after {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -moz-linear-gradient(top, rgba(255,255,255,0.21) 0%, rgba(95,100,111,0.21) 100%);
+/* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255,255,255,0.21)), color-stop(100%, rgba(95,100,111,0.21)));
+/* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(255,255,255,0.21) 0%, rgba(95,100,111,0.21) 100%);
+/* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(255,255,255,0.21) 0%, rgba(95,100,111,0.21) 100%);
+/* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(255,255,255,0.21) 0%, rgba(95,100,111,0.21) 100%);
+/* IE10+ */
+  background: linear-gradient(to bottom, rgba(255,255,255,0.21) 0%, rgba(95,100,111,0.21) 100%);
+/* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#36ffffff', endColorstr='#365f646f',GradientType=0 ); /* IE6-9 */
+}
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#36ffffff', endColorstr='#365f646f',GradientType=0 ); /* IE6-9 */
+.is-loading-stripes-eff {
+  background-image: -webkit-linear-gradient(-45deg, rgba(255,255,255,0.2) 25%, rgba(255,154,26,0) 25%, rgba(255,154,26,0) 50%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.2) 75%, rgba(255,154,26,0) 75%);
+  background-image: -moz-linear-gradient(-45deg, rgba(255,255,255,0.2) 25%, rgba(255,154,26,0) 25%, rgba(255,154,26,0) 50%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.2) 75%, rgba(255,154,26,0) 75%);
+  background-image: -o-linear-gradient(-45deg, rgba(255,255,255,0.2) 25%, rgba(255,154,26,0) 25%, rgba(255,154,26,0) 50%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.2) 75%, rgba(255,154,26,0) 75%);
+  background-image: linear-gradient(-45deg, rgba(255,255,255,0.2) 25%, rgba(255,154,26,0) 25%, rgba(255,154,26,0) 50%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.2) 75%, rgba(255,154,26,0) 75%);
+  background-size: 50px 50px;
+  -webkit-animation: loading-stripes 2s linear infinite;
+  -moz-animation: loading-stripes 2s linear infinite;
+  -ms-animation: loading-stripes 2s linear infinite;
+  animation: loading-stripes 2s linear infinite;
+}
+@-webkit-keyframes loading-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes loading-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-ms-keyframes loading-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-webkit-keyframes loading-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 50px 50px;
+  }
+}

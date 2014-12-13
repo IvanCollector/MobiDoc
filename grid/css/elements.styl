@@ -1,0 +1,360 @@
+@import 'assets/shapes.styl'
+@import 'assets/colors.styl'
+/*==========  78b60a297f4aaf4ed3544ac6cf9d75e9  ==========*/
+.pagination-btn-e
+	width 3*gs
+	height 5*gs + 2*PX
+	border-radius 2*PX
+	position relative
+	background transparent
+	
+	&:hover
+		cursor pointer
+		background-color rgba(255,255,255,.2)
+	
+	spCount  = 7
+	spCountY = 2
+	&:after
+		content: ''
+		rect 20*PX
+		position absolute
+		top 50%
+		margin-top - 10*PX
+		margin-left - PX
+		background: transparent url('../icons/Zone-contrils+misc.png') no-repeat (100/(spCount - 1))*1% bottom
+		background-size spCount*100% spCountY*100%
+
+	&.is-right
+		&:after
+			background: transparent url('../icons/Zone-contrils+misc.png') no-repeat (100/(spCount - 1))*0% bottom
+			background-size spCount*100% spCountY*100%
+
+	&.is-inactive
+		cursor default II
+		&:after
+			margin-left 0
+			background: transparent url('../icons/Zone-contrils+misc.png') no-repeat (100/(spCount - 1))*1% top
+			background-size spCount*100% spCountY*100%
+
+		&.is-right
+			// 4!
+			&:after
+				background: transparent url('../icons/Zone-contrils+misc.png') no-repeat (100/(spCount - 1))*0% top
+				background-size spCount*100% spCountY*100%
+
+		&:hover
+			background-color transparent II
+
+
+input
+	fSize = 12
+	PXX = norm(fSize)*PX
+	&:focus
+		outline 0
+	/*==========  c818da76a1ff816a868ccdcf7026c098  ==========*/
+	&.is-iconed
+		padding-left 22*PXX
+	/*==========  c818da76a1ff816a868ccdcf7026c098  ==========*/
+	&.is-search
+		background transparent url() no-repeat left center
+		background-size 16*PXX	
+
+/*==========  797c8c7f27517ee8945f729f622e8d0c  ==========*/
+.filter-input-e
+	fSize = 12
+	PXX = norm(fSize)*PX
+	height 24*PXX
+	display block
+	width 100%
+	border PXX solid c-blue-grey
+	border-radius 2*PXX
+	padding 0 9*PX
+	font-size fSize*PX
+	color c-black-near
+	bbox()
+
+	&:focus
+		background-color c-input-color
+
+
+		
+
+/*==========  503790e9fee70cdfbe3a98e122ccac96  ==========*/
+.toolbar-input-e
+	fSize = 12
+	bbox()
+	PXX = norm(fSize)*PX
+	height 22*PXX
+	display block
+	width 100%
+	border PXX solid #898f98
+	border-radius 2*PXX
+	padding 0 9*PX
+	font-size fSize*PX
+	box-shadow inset 0 PXX 2*PXX 0 rgba(0,0,0,.12), inset 0 PXX 0 0 rgba(0,0,0,.05)
+	color c-black-near
+
+	&:focus
+		outline 0
+		border norm(12)*PX solid #468ddc
+		box-shadow inset 0 PXX 2*PXX 0 rgba(70,141,220,.25), inset 0 PXX 0 0 rgba(70,141,220,.12)
+	
+	/*==========  c818da76a1ff816a868ccdcf7026c098  ==========*/
+	&.is-iconed
+		padding-left 22*PXX
+	/*==========  c818da76a1ff816a868ccdcf7026c098  ==========*/
+	&.is-search
+		background transparent url() no-repeat left center
+		background-size 16*PXX
+
+
+
+/*==========  6f4c46cafaeb4f43802274d6584012a0  ==========*/
+.color-sample-e
+	rect 3*gs
+	background-color pink
+	border-radius 2*PX
+	cursor: pointer
+
+	&.is-check
+		cursor: default
+		background transparent url() no-repeat center center
+
+/*==========  b4023a63ab9a382d7abbd2f8090c8c07  ==========*/
+.mbar-label-e
+	.content-el
+		font-size 11*PX 
+		font-weight bold
+		color #6d727f
+
+/*==========  8ba0583c2baf4153828709de7c1b48df  ==========*/
+.splitter-e
+	height 26*PX
+	width 10*PX
+	background-color #6ba4e3
+	border-radius 2*PX
+	position relative
+	cursor: pointer
+
+	&.is-horizontal
+		height 10*PX
+		width 26*PX
+
+	&:hover
+		background-color #468ddc
+
+
+/*==========  11ca6f27eaa9d19c73441bfe121356e6  ==========*/
+.expand-toggle-e
+	height 24*PX
+	width 26*PX
+	background-color #a5bbd9
+	cursor: pointer
+	border-top-left-radius 2*PX
+	border-bottom-left-radius 2*PX
+
+	&.is-right
+		border-radius 0
+		border-top-right-radius 2*PX
+		border-bottom-right-radius 2*PX
+
+	&:hover
+		background-color #87a4cd
+
+/*==========  b00e1dd3dc8708dc8bb149a04f0409b9  ==========*/
+.input-e
+	border 1px solid #d1d2d7
+	bbox()
+	width 100%
+	display block
+	border-radius 2*PX
+	color #2f3337
+	font-size 11*PX
+	padding 8*PX 16*PX
+	background-color white
+
+	&::-webkit-input-placeholder { /* WebKit browsers */
+	    color: #818586
+	}
+	&:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	    color: #818586
+	}
+	&::-moz-placeholder { /* Mozilla Firefox 19+ */
+	    color: #818586
+	}
+	&:-ms-input-placeholder { /* Internet Explorer 10+ */
+	    color: #818586
+	}
+
+	&:hover
+		border-color #468ddc
+	&:focus
+		border-color #468ddc
+		box-shadow inset 0 PX 4*PX lighten(#468ddc,35)
+		outline 0
+		transition: box-shadow .2s ease-out
+	
+	/*==========  7e672378257c5f1898933fe04e336096  ==========*/
+	&.is-error
+		border-color #dc3d36 II
+		box-shadow inset 0 PX 4*PX lighten(#dc3d36,25) II
+
+	/*==========  2dc7c48c5903fbe536dd5ec79ce3f6ef  ==========*/
+	fSize = 18
+	PXX = norm(fSize)*PX
+	&.is-login
+		height 5*gs + 2*PX
+		border-radius 3*PX
+		font-size fSize*PX
+		padding 2*PX (2*gs - 2*PX)
+		box-shadow inset 0 PX 3*PX darken(#ebeef6,5)
+
+		&::-webkit-input-placeholder { /* WebKit browsers */
+		    line-height: 3*gs + PX
+		    font-weight 100
+		    font-size: 18*PX
+		    color: #798aa0
+		}
+		&:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+		    line-height: 3*gs + PX
+		    font-weight 100
+		    font-size: 18*PX
+		    color: #798aa0
+		}
+		&::-moz-placeholder { /* Mozilla Firefox 19+ */
+		    line-height: 3*gs + PX
+		    font-weight 100
+		    font-size: 18*PX
+		    color: #798aa0
+		}
+		&:-ms-input-placeholder { /* Internet Explorer 10+ */
+		    line-height: 3*gs + PX
+		    font-weight 100
+		    font-size: 18*PX
+		    color: #798aa0
+		}
+
+
+		&:hover
+			border-color #6ca9f0
+
+		&:focus
+			border-color #6ca9f0
+			box-shadow inset 0 PX 3*PX lighten(#468ddc,20)
+			outline 0
+			transition: box-shadow .2s ease-out
+	/*==========  a3eb288c1e00edf6474199954fc69011  ==========*/
+	&.is-name
+		background transparent url('../icons/login-input-name.png') no-repeat 96% center 
+		background-size 18*PX
+
+	&.is-password
+		background transparent url('../icons/login-input-password.png') no-repeat 94.75% center
+		background-size 13.95*PXX
+
+
+
+
+/*==========  6a34e378081ea7af593fad7a44131fc9  ==========*/
+.textarea-e
+	border 1px solid #d1d2d7
+	bbox()
+	width 100%
+	display block
+	border-radius 2px
+	color #2f3337
+	font-size 11*PX
+	padding 8*PX 16*PX
+	background-color white
+	resize none
+
+	&[disabled]
+		border-color #d1d2d7 II
+		background-color #f2f6fb II
+		box-shadow none II
+		color darken(#d1d2d7,10)
+		cursor default II
+
+	&:hover
+		border-color #468ddc
+	&:focus
+		border-color #468ddc
+		box-shadow inset 0 1px 2px lighten(#468ddc,20)
+		outline 0
+		transition: box-shadow .2s ease-out
+
+.hash-e
+	color #888888
+	font-size 11*PX
+
+
+
+
+
+/*==========  dcc43dc86d562c0329fac908da0a85cc  ==========*/
+.btn-confirm-e
+	display inline-block
+	bbox()
+	font-size .73em
+	// font-weight bold
+	padding .35em 17*PX
+	border-radius 2px
+	box-shadow 0 1px 3px #2f3337
+	cursor pointer
+	background-color #6ca9f0
+
+	&:hover
+		box-shadow none
+
+	&:active
+		background-color #468ddc
+
+	&.is-red
+		background-color #e96e5f
+
+		&:active
+			background-color #d14d3d
+
+
+/*==========  e8107290b79effd87c30abe856279fb9  ==========*/
+.led-e
+	rect 2em
+	background transparent url('../icons/System_toolbar/36x36_Led_green.png')
+	background-size 100%
+
+	&.is-red
+		background transparent url('../icons/System_toolbar/36x36_Led_red.png')
+		background-size 100%
+
+/*==========  418242df5e1866763bf4e4664737a2e3  ==========*/
+.footer-panel-e
+	height 1.625em
+
+.text-btn-e
+	cursor  pointer
+	padding .25em .8em
+	height 1.5em
+	line-height 1.5em
+	border-radius: 2px
+	font-size .75em
+	position relative
+
+	&.is-check
+		background-color: rgba(255, 255, 255, .2)
+
+	&.is-arrow-drop
+		margin-right: 2.375em
+
+		&:after
+			content:''
+			width: 0
+			height: 0
+			position:absolute
+			top: 50%
+			right: -.725em
+			margin-top -.0675em
+			z-index: 2
+			border-left: .3625em solid transparent
+			border-right: .3625em solid transparent
+			border-top: .3625em solid white
+
