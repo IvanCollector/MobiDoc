@@ -1,10 +1,15 @@
 .icon {
   width: 2em;
   height: 2em;
+  opacity: 0.8;
   cursor: pointer;
   position: relative;
-  border-radius: 0.1875em;
+  border-radius: 0.0em;
   image-rendering: -webkit-optimize-contrast;
+ -webkit-transition: opacity 0.17s ease-in-out;
+  -moz-transition: opacity 0.17s ease-in-out;
+  -o-transition: opacity 0.17s ease-in-out;
+  transition: opacity 0.17s ease-in-out;
 /* 2ec2ff83d9e6adbbf418f65b91970cb3 */
 /* 17512c48bfabc7c4c5f360f20936eb7e */
 /* 677986ae38d34f767b23f6b2756ee0ee */
@@ -148,6 +153,10 @@
     
     */
 /*  a9363b6a3f23d0c40c9d5f4860208903  */
+}
+
+.icon.is-pressed{
+  background-color: #27374A !important;
 }
 .icon:focus {
   outline: 0;
@@ -1171,35 +1180,44 @@
 .icon.is-coral {
   width: 2.25em;
   height: 2.25em;
-  background: transparent url("../svg/calypso.svg") no-repeat 100%;
+  background: transparent url("../svg/Calypso.svg") no-repeat 50%;
 }
 .icon.is-coral.is-glow--onhover:before {
-  background: transparent url("../svg/calypso.svg") no-repeat 100%;
+  background: transparent url("../svg/Calypso.svg") no-repeat 50%;
 }
+
+.icon:hover {
+  opacity: 1;
+  -webkit-transition: opacity 0.17s ease-in-out;
+  -moz-transition: opacity 0.17s ease-in-out;
+  -o-transition: opacity 0.17s ease-in-out;
+  transition: opacity 0.17s ease-in-out;
+}
+
 .icon.is-compass {
   width: 2.25em;
   height: 2.25em;
-  background: transparent url("../svg/resource.svg") no-repeat 100%;
+  background: transparent url("../svg/Resource.svg") no-repeat 50%;
 }
 .icon.is-compass.is-glow--onhover:before {
-  background: transparent url("../svg/resource.svg") no-repeat 100%;
+  background: transparent url("../svg/Resource.svg") no-repeat 50%;
 }
 .icon.is-save-menu {
   width: 2.25em;
   height: 2.25em;
-  background: transparent url("../svg/File_server.svg") no-repeat 100%;
+  background: transparent url("../svg/File_server.svg") no-repeat 50%;
 }
 .icon.is-save-menu.is-glow--onhover:before {
-  background: transparent url("../svg/File_server.svg") no-repeat 100%;
+  background: transparent url("../svg/File_server.svg") no-repeat 50%;
 }
 .icon.is-process {
   width: 2.25em;
   height: 2.25em;
-  background: transparent url("../svg/processing.svg") no-repeat 100%;
+  background: transparent url("../svg/Processing.svg") no-repeat 50%;
  }
   
 .icon.is-process.is-glow--onhover:before {
-  background: transparent url("../svg/processing.svg") no-repeat 100%;
+  background: transparent url("../svg/Processing.svg") no-repeat 50%;
 }
 .icon.is-led {
   width: 2.25em;
@@ -1214,10 +1232,10 @@
 .icon.is-eye {
   width: 2.25em;
   height: 2.25em;
-  background: transparent url("../svg/modules.svg") no-repeat 100%;
+  background: transparent url("../svg/Modules.svg") no-repeat 50%;
 }
 .icon.is-eye.is-check {
-  background: transparent url("../svg/modules.svg") no-repeat 100%;
+  background: transparent url("../svg/Modules.svg") no-repeat 50%;
 }
 .icon.is-remove-border {
   width: 2.25em;

@@ -428,7 +428,6 @@
 .blue-toolbar-section-l {
   float: left;
   position: relative;
-  padding: 0 0.6875em;
 }
 .blue-toolbar-section-l .toolbar-item-e {
   margin-top: 0.6363636363636364em;
@@ -467,7 +466,10 @@
 .blue-toolbar-section-l.is-more-btn .toolbar-more-b {
   display: block;
 }
-.blue-toolbar-section-l > .icon,
+.blue-toolbar-section-l > .icon
+{
+  float: left;
+}
 .blue-toolbar-section-l > .icon-with-text-b,
 .blue-toolbar-section-l > .icon-dropdown-b {
   float: left;
@@ -553,7 +555,10 @@
   padding-top: 0.45em;
   z-index: 0;
 }
-.row-l.is-system-panel {
+.row-l1 {
+  z-index: 0;
+}
+.row-l1.is-system-panel {
   position: absolute;
   padding-right: 7.875em;
   padding-bottom: 0.375em;
@@ -562,14 +567,15 @@
   box-sizing: border-box;
   top: -0.0625em;
   width: 100%;
-  min-height: 3em;
-  margin-left: 0.125em;
+  min-height: 2.25em;
+  height: 2.25em;
+  margin-left: 0em;
 }
-.row-l.is-system-panel:after {
+.row-l1.is-system-panel:after {
   content: '';
   position: absolute;
   bottom: -0.0625em;
-  left: -0.125em;
+  left: 0em;
   height: 0.0625em;
   width: 100%;
   background-color: rgba(255,255,255,0.2);

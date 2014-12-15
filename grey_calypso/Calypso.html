@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="./Calypso_files/normalize.css">
     <link rel="stylesheet" type="text/css" href="./Calypso_files/jquery.jscrollpane.css">
     <link rel="stylesheet" type="text/css" href="./Calypso_files/resizer.css">
+    <script type="text/javascript" src="./Calypso_files/jquery-1.11.0.min.js"></script>
     <link href="http://calypso.postmodern.ru/favicon.ico" rel="shortcut icon" type="image/x-icon">
 
     <body class="is-disableselect"><div id="sidebar">
@@ -26,7 +27,7 @@
 </div></div>
     <div class="iScrollVerticalScrollbar iScrollLoneScrollbar" style="position: absolute; z-index: 4; width: 0.25em; bottom: 52px; top: 28px; right: 3px;"><div class="iScrollIndicator" style="width: 100%; transition: 0ms cubic-bezier(0.1, 0.57, 0.1, 1); -webkit-transition: 0ms cubic-bezier(0.1, 0.57, 0.1, 1); display: none; height: 414px; transform: translate(0px, 0px) translateZ(0px);"></div></div></div>
 </div><div id="main" class="is-disableselect">
-    <div class="row-l is-system-panel cf js-system-panel is-disableselect">
+    <div class="row-l1 is-system-panel cf js-system-panel is-disableselect">
         <div class="blue-toolbar-fork-l">
             <div class="left-side-ll">
                 <div class="blue-toolbar-overflow-l">
@@ -35,11 +36,11 @@
 				        	<div class="ellipsis-be"></div>
 				        </div>
                         <div class="blue-toolbar-section-l cf">
-                            <div class="icon is-coral is-glow--onhover is-white-bg-on-check-large"></div>
-                            <div class="icon is-process is-glow--onhover is-white-bg-on-check-large"></div>
-                            <div class="icon is-compass is-glow--onhover is-white-bg-on-check-large"></div>
-                            <div id="modeButton" class="icon is-glow--onhover is-white-bg-on-check-large is-eye" title="Переключение режима Design/Runtime" onclick="calypso1.design.getDesignManager().setMode(this); return false;" style="opacity: 1;"></div>
-                            <div class="icon is-save-menu is-glow--onhover is-white-bg-on-check-large" onclick="calypso1.common.viewLoader(this);"></div>
+                            <div class="icon is-coral is-pressed is-glow--onhover is-white-bg-on-check-large" onclick="$(this).toggleClass('is-pressed')"></div>
+                            <div class="icon is-process is-glow--onhover is-white-bg-on-check-large" onclick="$(this).toggleClass('is-pressed')"></div>
+                            <div class="icon is-compass is-glow--onhover is-white-bg-on-check-large" onclick="$(this).toggleClass('is-pressed')"></div>
+                            <div id="modeButton" class="icon is-glow--onhover is-white-bg-on-check-large is-eye" title="Переключение режима Design/Runtime" onclick="$(this).toggleClass('is-pressed')"></div>
+                            <div class="icon is-save-menu is-glow--onhover is-white-bg-on-check-large" onclick="$(this).toggleClass('is-pressed')"></div>
                         </div>
                     <div class="blue-toolbar-section-l one-control cf" style="padding-left: 0.6875em;"><div class="toolbar-item-e">Документы</div></div><div class="blue-toolbar-section-l one-control cf"><div class="toolbar-item-e">CRM</div></div><div class="blue-toolbar-section-l one-control cf"><div class="toolbar-item-e">ЭMK</div></div><div class="blue-toolbar-section-l one-control cf"><div class="toolbar-item-e">Редактирование ЭMK</div></div><div class="blue-toolbar-section-l one-control cf"><div class="toolbar-item-e">Ресурсы</div></div><div class="blue-toolbar-section-l one-control cf"><div class="toolbar-item-e">Опции</div></div><div class="blue-toolbar-section-l one-control cf"><div class="toolbar-item-e">Настройки</div></div><div class="blue-toolbar-section-l one-control cf"><div class="toolbar-item-e">Контуры</div></div><div class="blue-toolbar-section-l one-control cf"><div class="toolbar-item-e">Привязка</div></div></div>
                 </div>
