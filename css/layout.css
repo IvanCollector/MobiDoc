@@ -117,9 +117,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#416a80', end
 	position: absolute;
 	left:2em;
 	top:5px;
-	width:24px;
-	height:24px;
-	background-image: url(../images/home_plus.png);
+	width:25px;
+	height:25px;
+	background-image: url(../svg/home_plus.svg);
 	z-index: 1;
 }
 
@@ -216,9 +216,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#62C6D6', end
 	position: absolute;
 	left:2em;
 	top:5px;
-	width:24px;
-	height:24px;
-	background-image: url(../images/options.png);
+	width:25px;
+	height:25px;
+	background-image: url(../svg/options.svg);
 	z-index: 1;
 }
 
@@ -296,19 +296,27 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#62C6D6', end
 }
 
 #top-line-text.top-line-active{
-	background: url(../images/person_1.png) no-repeat 0px center;
+	background: url(../svg/appointment_1.svg) no-repeat 0px center;
 }
 
 #top-line-text{
-	background: url(../images/person_2.png) no-repeat 0px center;
+	background: url(../svg/appointment_2.svg) no-repeat 0px center;
+}
+
+#top-line-dossier.top-line-active{
+	background: url(../svg/dossier_1.svg) no-repeat 0px center;
 }
 
 #top-line-dossier{
-	background: url(../images/dossier.png) no-repeat 0px center;
+	background: url(../svg/dossier_2.svg) no-repeat 0px center;
+}
+
+#top-line-prescriptions.top-line-active{
+	background: url(../svg/prescription_1.svg) no-repeat 0px center;
 }
 
 #top-line-prescriptions{
-	background: url(../images/prescriptions.png) no-repeat 0px center;
+	background: url(../svg/prescription_2.svg) no-repeat 0px center;
 }
 
 
@@ -331,6 +339,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#62C6D6', end
 }
 
 #date-zone {
+	position: relative;
 	margin: 30px;
 	background-color:#E8F1F7;
 	height: 35px;
@@ -416,11 +425,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#62C6D6', end
 #date-picker {
 	cursor:pointer;
 	float: left;
-	width:26px;
-	height:26px;
+	width:25px;
+	height:25px;
 	margin-left: 20px;
-	margin-top: 2px;
-	background-image: url(../images/calendar.png);
+	margin-top: 4px;
+	background-image: url(../svg/calendar_2.svg);
+	opacity: 1;
+	filter: alpha(opacity=100);
+	z-index: 1;
+}
+
+#date-picker.date-picker-open {
+	background-image: url(../svg/calendar_1.svg);
 	opacity: 1;
 	filter: alpha(opacity=100);
 	z-index: 1;
@@ -430,6 +446,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#62C6D6', end
 	opacity: 0.8;
 	filter: alpha(opacity=80);
 	-webkit-transition: all 0.2s ease-in-out;
+}
+
+#date-picker:hover2 {
+	background-image: url(../svg/calendar_3.svg);
+	opacity: 1;
+	filter: alpha(opacity=100);
+	z-index: 1;
 }
 
 #grid-zone1 {
@@ -571,7 +594,7 @@ table {
 	border-style: double;
  	border-collapse: separate;	
  	border: 1px double #63C6D6;
- 	background: #DFFFFF url(../images/plus.png) no-repeat 92% center;
+ 	background: #DFFFFF url(../svg/plus.svg) no-repeat 92% center;
 	z-index: 4;
 }
 
@@ -611,6 +634,7 @@ table {
 	width: 100%;
 }
 
+
 #med-select {
 	margin-left: 40px;
 	text-indent: 5px;
@@ -622,19 +646,56 @@ table {
     font-size: 14px;
     line-height: 36px;
 	color: #587C8F;
-	font-family: "FiraSans";
 	border: 1px solid #63C6D6;
-    background: url(../images/arr_down.png) no-repeat 135px; 
 }
 
 .med-select-b1 {
 	border: 1px solid #63C6D6;
-    background: url(../images/arr_up_black.png) no-repeat 135px !important; 
 } 
 
 #med-select:hover{
 	border: 1px solid #63C6D6;
-    background: url(../images/arr_down_black.png) no-repeat 135px; 
+}
+
+:not(.med-select-b1) > .drop-arrow {
+	-moz-transform: rotate(90deg); /* Для Firefox */
+	-ms-transform: rotate(90deg); /* Для IE */
+	-webkit-transform: rotate(90deg); /* Для Safari, Chrome, iOS */
+	-o-transform: rotate(90deg); /* Для Opera */
+	transform: rotate(90deg);
+	background: url(../svg/arrow_2.svg) no-repeat 0 0;
+}
+
+:not(.med-select-b1):hover > .drop-arrow {
+	-moz-transform: rotate(90deg); /* Для Firefox */
+	-ms-transform: rotate(90deg); /* Для IE */
+	-webkit-transform: rotate(90deg); /* Для Safari, Chrome, iOS */
+	-o-transform: rotate(90deg); /* Для Opera */
+	transform: rotate(90deg);
+	background: url(../svg/arrow_1.svg) no-repeat 0 0;
+}
+
+#sel-arrow1{
+	left: 365px;
+	top: 10px;
+}
+
+#sel-arrow2{
+	left: 257px;
+	top: 5px;
+}
+
+.drop-arrow{
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	z-index: 2;
+	background: url(../svg/arrow_1.svg) no-repeat 0 0;
+	-moz-transform: rotate(270deg); /* Для Firefox */
+	-ms-transform: rotate(270deg); /* Для IE */
+	-webkit-transform: rotate(270deg); /* Для Safari, Chrome, iOS */
+	-o-transform: rotate(270deg); /* Для Opera */
+	transform: rotate(270deg);
 }
 
 #med-select-opt{
@@ -655,7 +716,6 @@ table {
 	color: #587C8F;
 	height: 29px;
 	line-height: 29px;
-	font-family: "FiraSans";
 }
 
 .med-select-value:hover{
@@ -839,6 +899,7 @@ table {
 }
 
 #motif-combo{
+	position: relative;
 	margin-top: -7px;
 	margin-left: 18px;
 	padding-left: 8px;
@@ -854,7 +915,6 @@ table {
 	border-color: #63C6D6;
 	border-width: 1px;
 	border-style: solid;
-    background: url(../images/arr_down.png) no-repeat 256px center;
 }
 
 #commentaire{
@@ -866,7 +926,6 @@ table {
 }
 
 #comment-text{
-	font-family: "FiraSans";
 	width: 306px;
 	height: 120px;
 	padding: 8px;
