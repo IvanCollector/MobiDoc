@@ -57,7 +57,11 @@ define(
             },
 
 			getVisiblePortion: function() {
-				return (Math.floor(this.options.height / this._rowHeight) + 1);
+				//return (Math.floor(this.options.height / this._rowHeight) + 1);
+				if (this._rowHeight > 0)
+					return (Math.floor($(this)[0].element[0].children[0].children[1].clientHeight / this._rowHeight) + 1);
+				else
+					return 100;
 			},
 			
 			getVisibleRange: function() {
