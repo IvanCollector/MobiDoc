@@ -44,7 +44,9 @@
 		</div>
 		<div id="motif">
 			<div id="motif-label">Motif</div>
-			<div id="motif-combo">Maladie</div>
+			<div id="motif-combo">Maladie
+				<div id="sel-arrow2" class="drop-arrow"></div>
+			</div>
 		</div>
 		<div id="commentaire">Commentaire
 			<div id="comment">
@@ -111,8 +113,9 @@
 				<div id="date-month">fev</div>
 				<div id="date-year">2014</div>
 			</div>
-			<div id="date-picker"></div>
+			<div id="date-picker" onclick="$(this).toggleClass('date-picker-open');"></div>
 			<div id="med-select" class="med-select-b1" onclick="$(this).toggleClass('med-select-b1'); $('#med-select-opt').toggle();">Ophtalmologie 1
+				<div id="sel-arrow1" class="drop-arrow"></div>
 				<div id="med-select-opt">
 	  				<div id="combo1" class="med-select-value">Ophtalmologie 1</div>
 	  				<div id="combo2" class="med-select-value">Ophtalmologie 2</div>
